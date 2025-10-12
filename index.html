@@ -12,22 +12,36 @@
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-content">
-            <div class="nav-logo">Anagha S. Namasevi</div>
-            <div class="nav-links">
+            <div class="nav-logo">
+                <span class="logo-text">Anagha S. Namasevi</span>
+            </div>
+            <div class="nav-links" id="navLinks">
                 <a href="#home" class="nav-link">Home</a>
                 <a href="#skills" class="nav-link">Skills</a>
                 <a href="#experience" class="nav-link">Experience</a>
                 <a href="#projects" class="nav-link">Projects</a>
                 <a href="#contact" class="nav-link">Contact</a>
             </div>
+            <div class="burger-menu" id="burgerMenu">
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+            </div>
         </div>
     </nav>
 
     <!-- Home Section -->
     <section id="home" class="home-section">
+        <!-- Particle Background -->
+        <div class="particles-container" id="particlesContainer">
+            <canvas id="particlesCanvas"></canvas>
+        </div>
+        
         <div class="container">
             <div class="content-wrapper">
-                <h1 class="name">Anagha Shamsundar Namasevi</h1>
+                <h1 class="name">
+                    <span class="name-animated">Anagha Shamsundar Namasevi</span>
+                </h1>
                 <h2 class="subheading">Graduate Student in Construction Management | Background in Architecture & Design</h2>
                 
                 <!-- Photo Section -->
@@ -529,17 +543,17 @@
                                 </div>
                                 <div class="contact-text">
                                     <h4>Email</h4>
-                                    <p>anagha.namasevi@gmail.com</p>
+                                    <p><a href="mailto:namasevi.anagha@gmail.com" class="email-link">namasevi.anagha@gmail.com</a></p>
                                 </div>
                             </div>
                             
                             <div class="contact-info-item">
-                                <div class="contact-icon">
-                                    <i class="fab fa-linkedin"></i>
+                                <div class="contact-icon linkedin-icon">
+                                    <i class="fab fa-linkedin-in"></i>
                                 </div>
                                 <div class="contact-text">
                                     <h4>LinkedIn</h4>
-                                    <p>linkedin.com/in/ar-anagha-namasevi</p>
+                                    <p><a href="https://linkedin.com/in/ar-anagha-namasevi" target="_blank" class="linkedin-link">linkedin.com/in/ar-anagha-namasevi</a></p>
                                 </div>
                             </div>
                         </div>
