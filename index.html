@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anagha Shamsundar Namasevi - Portfolio</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
@@ -17,6 +17,7 @@
             </div>
             <div class="nav-links" id="navLinks">
                 <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
                 <a href="#skills" class="nav-link">Skills</a>
                 <a href="#experience" class="nav-link">Experience</a>
                 <a href="#projects" class="nav-link">Projects</a>
@@ -30,40 +31,35 @@
         </div>
     </nav>
 
-    <!-- Home Section -->
-    <section id="home" class="home-section">
-        <!-- Particle Background -->
-        <div class="particles-container" id="particlesContainer">
-            <canvas id="particlesCanvas"></canvas>
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <canvas id="particlesCanvas" class="particles-canvas"></canvas>
+        <div class="hero-content">
+            <h1 class="hero-name">Anagha Shamsundar Namasevi</h1>
+            <p class="hero-tagline">Graduate Student in Construction Management | Background in Architecture & Design</p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn btn-gold">View My Work</a>
+                <a href="#" class="btn btn-outline-gold">Download CV</a>
+            </div>
         </div>
-        
-        <div class="container">
-            <div class="content-wrapper">
-                <h1 class="name">
-                    <span class="name-animated">Anagha Shamsundar Namasevi</span>
-                </h1>
-                <h2 class="subheading">Graduate Student in Construction Management | Background in Architecture & Design</h2>
-                
-                <!-- Photo Section -->
-                <div class="photo-section">
-                    <div class="photo-frame">
-                        <img src="portrait.jpg" alt="Anagha Shamsundar Namasevi" class="profile-photo">
-                    </div>
-                </div>
+    </section>
 
-                <!-- Bio Section -->
-                <div class="bio-section">
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-divider"></div>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="portrait.jpg" alt="Anagha Shamsundar Namasevi" class="profile-photo">
+                </div>
+                <div class="about-text">
                     <p class="bio-text">
                         Architect with 3+ years of experience in architectural design, interiors, and landscapes. 
                         Currently pursuing a Master's in Construction Management to bridge design expertise with 
-                        project delivery, sustainability, and innovation.
+                        project delivery, sustainability, and innovation. I believe in creating spaces that not only 
+                        function beautifully but also contribute positively to the environment and community.
                     </p>
-                </div>
-
-                <!-- CTA Buttons -->
-                <div class="cta-section">
-                    <a href="#skills" class="btn btn-primary">View Skills</a>
-                    <a href="#projects" class="btn btn-secondary">View Projects</a>
                 </div>
             </div>
         </div>
@@ -78,65 +74,65 @@
                 
                 <!-- Skills Grid -->
                 <div class="skills-grid">
-                    <!-- Technical Tools -->
-                    <div class="skill-category technical">
+                    <!-- Design Software -->
+                    <div class="skill-category">
                         <div class="category-header">
                             <div class="category-icon">
-                                <i class="fas fa-tools"></i>
+                                <i class="fas fa-drafting-compass"></i>
                             </div>
-                            <h3 class="category-title">Technical Tools</h3>
+                            <h3 class="category-title">Design Software</h3>
                         </div>
                         <div class="skills-list">
                             <div class="skill-item">
-                                <div class="skill-icon autocad">
+                                <div class="skill-icon">
                                     <i class="fas fa-drafting-compass"></i>
                                 </div>
                                 <span class="skill-name">AutoCAD</span>
                             </div>
                             <div class="skill-item">
-                                <div class="skill-icon revit">
+                                <div class="skill-icon">
                                     <i class="fas fa-cube"></i>
                                 </div>
                                 <span class="skill-name">Revit</span>
                             </div>
                             <div class="skill-item">
-                                <div class="skill-icon navisworks">
+                                <div class="skill-icon">
                                     <i class="fas fa-project-diagram"></i>
                                 </div>
                                 <span class="skill-name">Navisworks</span>
                             </div>
                             <div class="skill-item">
-                                <div class="skill-icon sketchup">
+                                <div class="skill-icon">
                                     <i class="fas fa-cube"></i>
                                 </div>
                                 <span class="skill-name">SketchUp</span>
                             </div>
                             <div class="skill-item">
-                                <div class="skill-icon lumion">
+                                <div class="skill-icon">
                                     <i class="fas fa-sun"></i>
                                 </div>
                                 <span class="skill-name">Lumion</span>
                             </div>
                             <div class="skill-item">
-                                <div class="skill-icon enscape">
+                                <div class="skill-icon">
                                     <i class="fas fa-eye"></i>
                                 </div>
                                 <span class="skill-name">Enscape</span>
                             </div>
                             <div class="skill-item">
-                                <div class="skill-icon dynamo">
+                                <div class="skill-icon">
                                     <i class="fas fa-cogs"></i>
                                 </div>
                                 <span class="skill-name">Dynamo</span>
                             </div>
                             <div class="skill-item">
-                                <div class="skill-icon photoshop">
+                                <div class="skill-icon">
                                     <i class="fas fa-paint-brush"></i>
                                 </div>
                                 <span class="skill-name">Photoshop</span>
                             </div>
                             <div class="skill-item">
-                                <div class="skill-icon twinmotion">
+                                <div class="skill-icon">
                                     <i class="fas fa-vr-cardboard"></i>
                                 </div>
                                 <span class="skill-name">Twinmotion</span>
@@ -145,7 +141,7 @@
                     </div>
 
                     <!-- Project & Construction Management -->
-                    <div class="skill-category management">
+                    <div class="skill-category">
                         <div class="category-header">
                             <div class="category-icon">
                                 <i class="fas fa-hard-hat"></i>
@@ -154,37 +150,37 @@
                         </div>
                         <div class="skills-list">
                             <div class="skill-item">
-                                <div class="skill-icon documentation">
+                                <div class="skill-icon">
                                     <i class="fas fa-file-alt"></i>
                                 </div>
                                 <span class="skill-name">Construction Documentation</span>
                             </div>
                             <div class="skill-item">
-                                <div class="skill-icon research">
+                                <div class="skill-icon">
                                     <i class="fas fa-search"></i>
                                 </div>
                                 <span class="skill-name">Material Research</span>
                             </div>
                             <div class="skill-item">
-                                <div class="skill-icon compliance">
+                                <div class="skill-icon">
                                     <i class="fas fa-check-circle"></i>
                                 </div>
                                 <span class="skill-name">Compliance Checks</span>
                             </div>
                             <div class="skill-item">
-                                <div class="skill-icon optimization">
+                                <div class="skill-icon">
                                     <i class="fas fa-chart-line"></i>
                                 </div>
                                 <span class="skill-name">Cost Optimization</span>
                             </div>
                             <div class="skill-item">
-                                <div class="skill-icon leadership">
+                                <div class="skill-icon">
                                     <i class="fas fa-users"></i>
                                 </div>
                                 <span class="skill-name">Team Leadership</span>
                             </div>
                             <div class="skill-item">
-                                <div class="skill-icon client">
+                                <div class="skill-icon">
                                     <i class="fas fa-handshake"></i>
                                 </div>
                                 <span class="skill-name">Client Management</span>
@@ -193,7 +189,7 @@
                     </div>
 
                     <!-- Soft Skills -->
-                    <div class="skill-category soft">
+                    <div class="skill-category">
                         <div class="category-header">
                             <div class="category-icon">
                                 <i class="fas fa-heart"></i>
@@ -202,25 +198,25 @@
                         </div>
                         <div class="skills-list">
                             <div class="skill-item">
-                                <div class="skill-icon collaboration">
+                                <div class="skill-icon">
                                     <i class="fas fa-users-cog"></i>
                                 </div>
                                 <span class="skill-name">Collaboration</span>
                             </div>
                             <div class="skill-item">
-                                <div class="skill-icon mentorship">
+                                <div class="skill-icon">
                                     <i class="fas fa-graduation-cap"></i>
                                 </div>
                                 <span class="skill-name">Mentorship</span>
                             </div>
                             <div class="skill-item">
-                                <div class="skill-icon problem-solving">
+                                <div class="skill-icon">
                                     <i class="fas fa-lightbulb"></i>
                                 </div>
                                 <span class="skill-name">Problem-Solving</span>
                             </div>
                             <div class="skill-item">
-                                <div class="skill-icon communication">
+                                <div class="skill-icon">
                                     <i class="fas fa-comments"></i>
                                 </div>
                                 <span class="skill-name">Communication</span>
@@ -229,7 +225,7 @@
                     </div>
 
                     <!-- Languages -->
-                    <div class="skill-category languages">
+                    <div class="skill-category">
                         <div class="category-header">
                             <div class="category-icon">
                                 <i class="fas fa-globe"></i>
@@ -238,25 +234,25 @@
                         </div>
                         <div class="skills-list">
                             <div class="skill-item">
-                                <div class="skill-icon english">
+                                <div class="skill-icon">
                                     <i class="fas fa-flag-usa"></i>
                                 </div>
                                 <span class="skill-name">English</span>
                             </div>
                             <div class="skill-item">
-                                <div class="skill-icon hindi">
+                                <div class="skill-icon">
                                     <i class="fas fa-flag"></i>
                                 </div>
                                 <span class="skill-name">Hindi</span>
                             </div>
                             <div class="skill-item">
-                                <div class="skill-icon marathi">
+                                <div class="skill-icon">
                                     <i class="fas fa-flag"></i>
                                 </div>
                                 <span class="skill-name">Marathi</span>
                             </div>
                             <div class="skill-item">
-                                <div class="skill-icon kannada">
+                                <div class="skill-icon">
                                     <i class="fas fa-flag"></i>
                                 </div>
                                 <span class="skill-name">Kannada</span>
@@ -384,6 +380,10 @@
                                 <div class="project-placeholder">
                                     <i class="fas fa-university"></i>
                                 </div>
+                                <div class="project-overlay">
+                                    <h4>B.Arch Thesis – Craft Village</h4>
+                                    <p>Thesis Project (2021)</p>
+                                </div>
                             </div>
                             <div class="project-content">
                                 <h4 class="project-title">B.Arch Thesis – Craft Village</h4>
@@ -404,6 +404,10 @@
                             <div class="project-image">
                                 <div class="project-placeholder">
                                     <i class="fas fa-book"></i>
+                                </div>
+                                <div class="project-overlay">
+                                    <h4>Research Paper – Heritage Walk</h4>
+                                    <p>Research Publication (2021)</p>
                                 </div>
                             </div>
                             <div class="project-content">
@@ -432,6 +436,10 @@
                                 <div class="project-placeholder">
                                     <i class="fas fa-home"></i>
                                 </div>
+                                <div class="project-overlay">
+                                    <h4>Interior Design Projects</h4>
+                                    <p>Alive Design Studio</p>
+                                </div>
                             </div>
                             <div class="project-content">
                                 <h4 class="project-title">Interior Design Projects</h4>
@@ -452,6 +460,10 @@
                             <div class="project-image">
                                 <div class="project-placeholder">
                                     <i class="fas fa-cube"></i>
+                                </div>
+                                <div class="project-overlay">
+                                    <h4>BIM Design Workflows</h4>
+                                    <p>Documentation & Workflow</p>
                                 </div>
                             </div>
                             <div class="project-content">
@@ -474,6 +486,10 @@
                                 <div class="project-placeholder">
                                     <i class="fas fa-leaf"></i>
                                 </div>
+                                <div class="project-overlay">
+                                    <h4>Sustainable Design Solutions</h4>
+                                    <p>Environmental Focus</p>
+                                </div>
                             </div>
                             <div class="project-content">
                                 <h4 class="project-title">Sustainable Design Solutions</h4>
@@ -494,6 +510,10 @@
                             <div class="project-image">
                                 <div class="project-placeholder">
                                     <i class="fas fa-users"></i>
+                                </div>
+                                <div class="project-overlay">
+                                    <h4>Community Design Initiatives</h4>
+                                    <p>Social Impact</p>
                                 </div>
                             </div>
                             <div class="project-content">
@@ -518,83 +538,57 @@
     <!-- Contact Section -->
     <section id="contact" class="contact-section">
         <div class="container">
-            <div class="content-wrapper">
-                <h2 class="section-title">Get in Touch</h2>
-                <p class="section-subtitle">Let's connect! I'd be happy to collaborate, share my portfolio in detail, or discuss opportunities in architecture and construction management.</p>
-                
-                <div class="contact-content">
-                    <!-- Contact Details -->
-                    <div class="contact-details">
-                        <h3 class="contact-details-title">Contact Information</h3>
-                        <div class="contact-info-grid">
-                            <div class="contact-info-item">
-                                <div class="contact-icon">
-                                    <i class="fas fa-map-marker-alt"></i>
-                                </div>
-                                <div class="contact-text">
-                                    <h4>Location</h4>
-                                    <p>Arlington, Texas</p>
-                                </div>
-                            </div>
-                            
-                            <div class="contact-info-item">
-                                <div class="contact-icon">
-                                    <i class="fas fa-envelope"></i>
-                                </div>
-                                <div class="contact-text">
-                                    <h4>Email</h4>
-                                    <p><a href="mailto:namasevi.anagha@gmail.com" class="email-link">namasevi.anagha@gmail.com</a></p>
-                                </div>
-                            </div>
-                            
-                            <div class="contact-info-item">
-                                <div class="contact-icon linkedin-icon">
-                                    <i class="fab fa-linkedin-in"></i>
-                                </div>
-                                <div class="contact-text">
-                                    <h4>LinkedIn</h4>
-                                    <p><a href="https://linkedin.com/in/ar-anagha-namasevi" target="_blank" class="linkedin-link">linkedin.com/in/ar-anagha-namasevi</a></p>
-                                </div>
-                            </div>
+            <h2 class="section-title">Let's Collaborate</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-info-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
                         </div>
-                        
-                        <div class="resume-download">
-                            <button class="btn btn-primary resume-btn">
-                                <i class="fas fa-download"></i>
-                                Download Résumé
-                            </button>
+                        <div class="contact-text">
+                            <h4>Email</h4>
+                            <p><a href="mailto:namasevi.anagha@gmail.com" class="email-link">namasevi.anagha@gmail.com</a></p>
                         </div>
                     </div>
                     
-                    <!-- Contact Form -->
-                    <div class="contact-form-container">
-                        <h3 class="form-title">Send a Message</h3>
-                        <form class="contact-form" id="contactForm">
-                            <div class="form-group">
-                                <label for="name" class="form-label">Name *</label>
-                                <input type="text" id="name" name="name" class="form-input" required>
-                                <span class="error-message" id="nameError"></span>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="email" class="form-label">Email *</label>
-                                <input type="email" id="email" name="email" class="form-input" required>
-                                <span class="error-message" id="emailError"></span>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="message" class="form-label">Message *</label>
-                                <textarea id="message" name="message" class="form-textarea" rows="5" required></textarea>
-                                <span class="error-message" id="messageError"></span>
-                            </div>
-                            
-                            <button type="submit" class="btn btn-primary form-submit">
-                                <i class="fas fa-paper-plane"></i>
-                                Send Message
-                            </button>
-                        </form>
+                    <div class="contact-info-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Location</h4>
+                            <p>Arlington, Texas</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-info-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-linkedin-in"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>LinkedIn</h4>
+                            <p><a href="https://linkedin.com/in/ar-anagha-namasevi" target="_blank" class="linkedin-link">linkedin.com/in/ar-anagha-namasevi</a></p>
+                        </div>
                     </div>
                 </div>
+                
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" class="form-input" placeholder="Your Name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" class="form-input" placeholder="Your Email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <textarea id="message" name="message" class="form-textarea" placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-teal">
+                        Send Message
+                    </button>
+                </form>
             </div>
         </div>
     </section>
@@ -602,7 +596,7 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="content-wrapper">
-            <p class="footer-text">© 2024 Anagha Shamsundar Namasevi. All rights reserved.</p>
+            <p class="footer-text">© 2026 Anagha Shamsundar Namasevi. All rights reserved.</p>
         </div>
     </footer>
 

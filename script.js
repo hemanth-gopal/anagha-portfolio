@@ -66,38 +66,37 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* =========================
-     Reveal-on-scroll & skill card stagger
+     Scroll Animations
   ========================== */
-  const revealObserver = new IntersectionObserver(
+  const animationObserver = new IntersectionObserver(
     entries => {
       entries.forEach(entry => {
-        if (!entry.isIntersecting) return;
-        entry.target.style.opacity = '1';
-        entry.target.style.transform = 'translateY(0)';
-        if (entry.target.classList.contains('skill-category')) {
-          const items = entry.target.querySelectorAll('.skill-item');
-          items.forEach((item, i) => {
-            setTimeout(() => {
-              item.style.opacity = '1';
-              item.style.transform = 'translateY(0)';
-            }, i * 100);
-          });
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
         }
       });
     },
     { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
   );
 
-  const skillCategories = document.querySelectorAll('.skill-category');
-  skillCategories.forEach(cat => {
-    const items = cat.querySelectorAll('.skill-item');
-    items.forEach(item => {
-      item.style.opacity = '0';
-      item.style.transform = 'translateY(20px)';
-      item.style.transition = 'opacity .5s ease, transform .5s ease';
-    });
-    revealObserver.observe(cat);
+  // Add animation classes to elements
+  const animatedElements = document.querySelectorAll('.skill-category, .project-card, .timeline-item, .about-content');
+  animatedElements.forEach(el => {
+    el.classList.add('fade-in');
+    animationObserver.observe(el);
   });
+
+  // Add slide animations to about section
+  const aboutImage = document.querySelector('.about-image');
+  const aboutText = document.querySelector('.about-text');
+  if (aboutImage) {
+    aboutImage.classList.add('slide-in-left');
+    animationObserver.observe(aboutImage);
+  }
+  if (aboutText) {
+    aboutText.classList.add('slide-in-right');
+    animationObserver.observe(aboutText);
+  }
 
   /* =========================
      Hover/click micro-interactions
@@ -311,7 +310,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* =========================
-     Particle Background System
+     Enhanced Particle Background System
   ========================== */
   class ParticleSystem {
     constructor(canvas) {
@@ -320,6 +319,7 @@ document.addEventListener('DOMContentLoaded', () => {
       this.particles = [];
       this.mouse = { x: -9999, y: -9999 };
       this.animationId = null;
+      this.time = 0;
       this._onResize = this.resizeCanvas.bind(this);
       this._onMouseMove = this.onMouseMove.bind(this);
       this._onTouchMove = this.onTouchMove.bind(this);
@@ -333,7 +333,6 @@ document.addEventListener('DOMContentLoaded', () => {
     resizeCanvas() {
       const rect = this.canvas.getBoundingClientRect();
       const dpr = window.devicePixelRatio || 1;
-      // reset any previous scaling to avoid compounding
       this.ctx.setTransform(1, 0, 0, 1, 0, 0);
       this.canvas.width = Math.max(1, Math.floor(rect.width * dpr));
       this.canvas.height = Math.max(1, Math.floor(rect.height * dpr));
@@ -343,66 +342,90 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     createParticles() {
-      const count = window.innerWidth < 768 ? 30 : 50;
+      const count = window.innerWidth < 768 ? 50 : 100;
       this.particles = [];
       const w = this.canvas.getBoundingClientRect().width;
       const h = this.canvas.getBoundingClientRect().height;
+      
       for (let i = 0; i < count; i++) {
         this.particles.push({
           x: Math.random() * w,
           y: Math.random() * h,
-          vx: (Math.random() - 0.5) * 0.5,
-          vy: (Math.random() - 0.5) * 0.5,
-          size: Math.random() * 3 + 2,
-          opacity: Math.random() * 0.7 + 0.3,
-          hue: Math.random() * 60 + 200
+          vx: (Math.random() - 0.5) * 2,
+          vy: (Math.random() - 0.5) * 2,
+          size: Math.random() * 3 + 1,
+          opacity: Math.random() * 0.6 + 0.3,
+          hue: Math.random() * 60 + 200,
+          baseX: Math.random() * w,
+          baseY: Math.random() * h,
+          amplitude: Math.random() * 80 + 30,
+          frequency: Math.random() * 0.03 + 0.02,
+          angle: Math.random() * Math.PI * 2,
+          speed: Math.random() * 0.02 + 0.01
         });
       }
     }
 
     updateParticles() {
+      this.time += 0.02;
       const rect = this.canvas.getBoundingClientRect();
-      this.particles.forEach(p => {
+      
+      this.particles.forEach((p, index) => {
+        // Continuous movement with velocity
         p.x += p.vx;
         p.y += p.vy;
+        
+        // Add floating motion
+        p.x += Math.sin(this.time * p.frequency + index) * 0.5;
+        p.y += Math.cos(this.time * p.frequency + index) * 0.5;
+        
+        // Keep particles in bounds with wrap-around
+        if (p.x < -50) p.x = rect.width + 50;
+        if (p.x > rect.width + 50) p.x = -50;
+        if (p.y < -50) p.y = rect.height + 50;
+        if (p.y > rect.height + 50) p.y = -50;
 
-        // bounce
-        if (p.x < 0 || p.x > rect.width) p.vx *= -1;
-        if (p.y < 0 || p.y > rect.height) p.vy *= -1;
-
-        p.x = Math.max(0, Math.min(rect.width, p.x));
-        p.y = Math.max(0, Math.min(rect.height, p.y));
-
-        // mouse interaction
+        // Mouse interaction with enhanced effect
         const dx = this.mouse.x - p.x;
         const dy = this.mouse.y - p.y;
         const dist = Math.hypot(dx, dy);
-        if (dist < 100 && dist > 0) {
-          const force = (100 - dist) / 100;
-          p.vx += (dx / dist) * force * 0.01;
-          p.vy += (dy / dist) * force * 0.01;
+        
+        if (dist < 200 && dist > 0) {
+          const force = (200 - dist) / 200;
+          const angle = Math.atan2(dy, dx);
+          p.vx += Math.cos(angle) * force * 0.1;
+          p.vy += Math.sin(angle) * force * 0.1;
         }
 
-        // friction
-        p.vx *= 0.99;
-        p.vy *= 0.99;
+        // Add some randomness to movement
+        p.vx += (Math.random() - 0.5) * 0.1;
+        p.vy += (Math.random() - 0.5) * 0.1;
+        
+        // Apply friction
+        p.vx *= 0.98;
+        p.vy *= 0.98;
+
+        // Pulsing opacity and size
+        p.opacity = 0.2 + Math.sin(this.time * 3 + index) * 0.4;
+        p.size = 1 + Math.sin(this.time * 2 + index) * 0.5;
       });
     }
 
     drawParticles() {
       const rect = this.canvas.getBoundingClientRect();
-      // clear
       this.ctx.clearRect(0, 0, rect.width, rect.height);
 
-      // connections
-      this.ctx.strokeStyle = 'rgba(52,152,219,0.3)';
-      this.ctx.lineWidth = 1;
+      // Enhanced connections with gradient
       for (let i = 0; i < this.particles.length; i++) {
         for (let j = i + 1; j < this.particles.length; j++) {
           const dx = this.particles[i].x - this.particles[j].x;
           const dy = this.particles[i].y - this.particles[j].y;
           const d = Math.hypot(dx, dy);
+          
           if (d < 120) {
+            const opacity = (120 - d) / 120 * 0.2;
+            this.ctx.strokeStyle = `rgba(26, 26, 46, ${opacity})`;
+            this.ctx.lineWidth = 1;
             this.ctx.beginPath();
             this.ctx.moveTo(this.particles[i].x, this.particles[i].y);
             this.ctx.lineTo(this.particles[j].x, this.particles[j].y);
@@ -411,15 +434,25 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       }
 
-      // particles
+      // Enhanced particles with modern architect vibe
       this.particles.forEach(p => {
         this.ctx.save();
-        this.ctx.fillStyle = `hsla(${p.hue},70%,60%,${p.opacity})`;
-        this.ctx.shadowColor = this.ctx.fillStyle;
-        this.ctx.shadowBlur = 10;
+        
+        // Outer glow with navy color
+        this.ctx.shadowColor = `rgba(26, 26, 46, ${p.opacity * 0.3})`;
+        this.ctx.shadowBlur = 8;
+        this.ctx.fillStyle = `rgba(26, 26, 46, ${p.opacity})`;
         this.ctx.beginPath();
-        this.ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+        this.ctx.arc(p.x, p.y, p.size * 1.2, 0, Math.PI * 2);
         this.ctx.fill();
+        
+        // Inner particle with gold accent
+        this.ctx.shadowBlur = 0;
+        this.ctx.fillStyle = `rgba(201, 162, 39, ${p.opacity * 0.8})`;
+        this.ctx.beginPath();
+        this.ctx.arc(p.x, p.y, p.size * 0.6, 0, Math.PI * 2);
+        this.ctx.fill();
+        
         this.ctx.restore();
       });
     }
@@ -435,6 +468,7 @@ document.addEventListener('DOMContentLoaded', () => {
       this.mouse.x = e.clientX - r.left;
       this.mouse.y = e.clientY - r.top;
     }
+    
     onTouchMove(e) {
       if (!e.touches?.[0]) return;
       const r = this.canvas.getBoundingClientRect();
@@ -460,15 +494,17 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* =========================
-     Init particles
+     Init Enhanced Particles
   ========================== */
   let particleSystem = null;
   const canvas = document.getElementById('particlesCanvas');
+  
   if (canvas) {
+    // Initialize particles immediately for hero section
     particleSystem = new ParticleSystem(canvas);
   }
 
-  // Also manage lifecycle when #home visibility changes
+  // Manage particle lifecycle based on hero section visibility
   const homeSection = document.getElementById('home');
   if (homeSection) {
     const psObserver = new IntersectionObserver(
