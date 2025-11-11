@@ -1,87 +1,55 @@
-# How to Add New Certifications
+# Add Certifications
 
-The certifications section is now **data-driven** and **future-proof**! Adding new certifications is super easy.
+**Location**: `script.js` → `certificationsData` array (~line 649)
 
-## 📝 Quick Guide
-
-### To Add a New Certification:
+## Quick Add
 
 1. Open `script.js`
-2. Find the `certificationsData` array (around line 649)
-3. Add a new object to the array
-
-### Example:
+2. Find `certificationsData` array
+3. Add new object:
 
 ```javascript
 {
-  title: "Your Certification Name",
-  organization: "Issuing Organization",
+  title: "Certification Name",
+  organization: "Issuing Org",
   date: "Month Year",
-  description: "Brief description of what this certification covers.",
-  icon: "fa-certificate",  // Font Awesome icon class (without 'fas')
-  badge: "Certified",      // Badge text (e.g., "Certified", "Completed", "Published")
-  type: "certification",   // Options: "certification", "course", "publication"
-  link: ""                 // Optional: Add URL to certificate if available
+  description: "Brief description.",
+  icon: "fa-certificate",  // Font Awesome icon (without 'fas')
+  badge: "Certified",      // Badge text
+  type: "certification",   // "certification", "course", or "publication"
+  link: ""                 // Optional: certificate URL
 }
 ```
 
-## 🎨 Available Icons
-
-You can use any Font Awesome icon. Common ones:
-- `fa-certificate` - General certificate
-- `fa-award` - Award/certification
-- `fa-trophy` - Achievement
-- `fa-graduation-cap` - Education
-- `fa-book` - Publication/book
-- `fa-code` - Programming/tech
-- `fa-chart-line` - Analytics/marketing
-- `fa-leaf` - Environment/sustainability
-- `fa-cube` - BIM/3D modeling
-- `fa-building` - Architecture
-- `fa-users` - Team/leadership
-- `fa-lightbulb` - Innovation
-- `fa-globe` - International/global
-
-**Full list**: https://fontawesome.com/icons
-
-## 🎨 Colors
-
-Colors are **automatically assigned** - they cycle through 6 beautiful color schemes. You don't need to worry about colors!
-
-## 📋 Complete Example
+## Example
 
 ```javascript
 {
   title: "LEED Green Associate",
   organization: "USGBC",
   date: "March 2023",
-  description: "Certified in sustainable building practices and green building design principles.",
+  description: "Certified in sustainable building practices.",
   icon: "fa-leaf",
   badge: "LEED Certified",
   type: "certification",
-  link: "https://example.com/certificate.pdf"  // Optional
+  link: "https://example.com/cert.pdf"  // Optional
 }
 ```
 
-## 🔗 Adding Links
+## Icons
 
-If you have a certificate URL or PDF link, just add it to the `link` field:
+Common Font Awesome icons:
+- `fa-certificate`, `fa-award`, `fa-trophy` - Certifications
+- `fa-graduation-cap`, `fa-book` - Education/Publications
+- `fa-code`, `fa-cube`, `fa-building` - Tech/Architecture
+- `fa-leaf`, `fa-chart-line` - Sustainability/Analytics
 
-```javascript
-link: "https://example.com/my-certificate.pdf"
-```
+**Full list**: https://fontawesome.com/icons
 
-The card will automatically become clickable and show a "View Certificate →" link on the back.
+## Notes
 
-## ✅ That's It!
-
-- Colors are assigned automatically
-- Cards are generated automatically
-- Carousel updates automatically
-- Dots update automatically
-- Everything works!
-
----
-
-**Location in code**: `script.js` → `certificationsData` array (around line 649)
+- ✅ Colors assigned automatically (6 color schemes)
+- ✅ Cards generated automatically
+- ✅ Carousel updates automatically
+- ✅ Add `link` for clickable certificate URL
 

@@ -1,35 +1,33 @@
-# EmailJS Quick Reference
+# EmailJS Setup
 
-**Status**: ✅ Already configured and working
+**Status**: ✅ Configured and working
 
-## Current Configuration
+## Current Config
 
-**Location**: `script.js` (lines 321, 391-392)
+**File**: `script.js` (lines ~321, 391-392)
 
 - **Public Key**: `Rbu8KlNbu2aAb69b-`
 - **Service ID**: `service_382hiu5`
 - **Template ID**: `template_cbx78qh`
-- **Recipient Email**: `namasevi.anagha@gmail.com`
+- **Recipient**: `namasevi.anagha@gmail.com`
 
-## If You Need to Update Credentials
+## Update Credentials
 
-1. **Get new credentials**: https://dashboard.emailjs.com/admin/integration
-2. **Update in code**: Edit `script.js` lines 321, 391-392
-3. **Test**: Submit contact form and check email
+1. Get new keys: https://dashboard.emailjs.com/admin/integration
+2. Update `script.js` lines 321, 391-392
+3. Test via contact form
 
-## Quick Troubleshooting
+## Troubleshooting
 
-- **Form not working?** Check browser console (F12) for errors
-- **No emails received?** Check spam folder, verify EmailJS dashboard logs
+- **Not working?** Check browser console (F12)
+- **No emails?** Check spam, verify EmailJS dashboard
 - **Rate limit?** Free plan: 200 emails/month
 - **Dashboard**: https://dashboard.emailjs.com/
 
-## Template Variables Used
+## Template Variables
 
-- `{{from_name}}` - Sender's name
-- `{{from_email}}` - Sender's email  
+- `{{from_name}}` - Sender name
+- `{{from_email}}` - Sender email
 - `{{message}}` - Message content
 
----
-
-**Full Documentation**: https://www.emailjs.com/docs/
+**Docs**: https://www.emailjs.com/docs/

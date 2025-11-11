@@ -1,56 +1,46 @@
-# Deployment Quick Reference
+# Deployment Guide
 
-**Status**: ✅ Already deployed and live at [anagha.me](https://anagha.me)
+**Status**: ✅ Live at [anagha.me](https://anagha.me)
 
-## Current Configuration
+## Current Setup
 
-- **Repository**: `hemanth-gopal/anagha-portfolio`
+- **Repo**: `hemanth-gopal/anagha-portfolio`
 - **Hosting**: GitHub Pages
-- **Domain**: `anagha.me` (configured in `CNAME` file)
+- **Domain**: `anagha.me` (via `CNAME`)
 - **Branch**: `main` → `/ (root)`
-- **HTTPS**: Enabled automatically
+- **HTTPS**: Auto-enabled
 
-## Updating Your Site
+## Update Site
 
 ```bash
 git add .
-git commit -m "Your commit message"
+git commit -m "Your message"
 git push origin main
 ```
 
-GitHub Pages rebuilds automatically (1-2 minutes).
+Site rebuilds automatically (1-2 min).
 
-## Quick Troubleshooting
+## Troubleshooting
 
-### Site Not Loading
+**Site not loading?**
 - Check DNS: https://dnschecker.org
-- Verify CNAME file contains: `anagha.me` (no www, no trailing slash)
-- Check GitHub Pages status: Settings → Pages
+- Verify `CNAME` contains: `anagha.me` (no www, no `/`)
+- Check: Settings → Pages
 
-### HTTPS Issues
-- Wait 24 hours for SSL certificate
+**HTTPS issues?**
+- Wait 24h for SSL certificate
 - Enable "Enforce HTTPS" in Settings → Pages
 
-### Domain Issues
-- Verify DNS A records point to GitHub Pages IPs
-- Current IPs: https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site
-
-## DNS Configuration (if needed)
-
-**A Records** (for apex domain `anagha.me`):
+**DNS A Records** (if needed):
 - `185.199.108.153`
 - `185.199.109.153`
 - `185.199.110.153`
 - `185.199.111.153`
 
-**Note**: GitHub Pages IPs may change. Check official docs for current IPs.
+*Note: GitHub IPs may change. Check official docs.*
 
-## Useful Links
+## Links
 
-- **GitHub Pages Docs**: https://docs.github.com/pages
-- **Repository**: https://github.com/hemanth-gopal/anagha-portfolio
+- **Pages Docs**: https://docs.github.com/pages
+- **Repo**: https://github.com/hemanth-gopal/anagha-portfolio
 - **DNS Checker**: https://dnschecker.org
-
----
-
-**Full Documentation**: https://docs.github.com/pages
