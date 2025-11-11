@@ -20,15 +20,16 @@
 
 ### High Priority (Content & Functionality)
 
-**1. Project Images & Media**
+**1. Project Images & Media** ⏳ *Planned for next month*
 - Replace placeholder icons with actual project photos
 - Add image captions/descriptions
 - Consider lightbox gallery for project images
+- **Status**: Placeholders kept - will add images/links next month
 
-**2. Project Button Functionality**
+**2. Project Button Functionality** ⏳ *Planned for next month*
 - Link "View Details" buttons to actual project pages/PDFs
-- Or remove buttons if content isn't ready
 - Add links to external portfolios (Behance, Dribbble) if available
+- **Status**: Buttons kept as-is - will add links next month
 
 **3. Image Optimization**
 - Compress `portrait.JPG` (aim for <200KB)
@@ -37,23 +38,16 @@
 
 ### Medium Priority (Enhancements)
 
-**4. Analytics & Tracking**
-- Add Google Analytics 4 (GA4) for visitor insights
-- Track form submissions and CV downloads
-
-**5. Certifications Section**
+**4. Certifications Section** 🎯 *To Be Implemented*
 - Add professional certifications/licenses
 - Display certification badges/logos
+- **Status**: Ready to implement - awaiting certification details
 
-**6. Publications Section**
-- Create dedicated section for research papers
-- Link to actual publications with DOI links
-
-**7. Social Media Integration**
+**5. Social Media Integration**
 - Add Instagram/Behance/Dribbble if you share design work
 - Add social icons to footer
 
-**8. 404 Error Page**
+**6. 404 Error Page**
 - Create custom `404.html` page
 - Match design aesthetic
 
@@ -90,16 +84,20 @@
 
 ## 📊 Priority Summary
 
-**Focus First On:**
-1. Project images (makes biggest visual impact)
-2. Working project links (improves user experience)
-3. Analytics (understand your audience)
+**Next Steps:**
+1. **Certifications Section** - To be implemented (awaiting details)
+2. **Project images** - Planned for next month (placeholders kept)
+3. **Project links** - Planned for next month (buttons kept)
 
 **Consider Later:**
-- Certifications section
-- Publications section
+- Social media footer links
+- 404 error page
+- Image optimization
 - Testimonials
-- Performance minification
+
+**Not Needed:**
+- ~~Analytics~~ - Not required
+- ~~Publications section~~ - Not needed
 
 **Optional Enhancements:**
 - Dark mode
@@ -109,12 +107,9 @@
 
 ---
 
-## 🎯 Recommended Next Steps
+## 🎯 Current Action Plan
 
-1. **Add real project images** - Biggest visual improvement
-2. **Make project buttons functional** - Better user experience
-3. **Add Google Analytics** - Track visitor behavior
-4. **Create 404 page** - Professional touch
+See [ACTION_PLAN.md](./ACTION_PLAN.md) for detailed implementation checklist for Certifications section.
 
 ---
 
