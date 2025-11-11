@@ -2,39 +2,6 @@
 
 document.addEventListener('DOMContentLoaded', () => {
   /* =========================
-     Masters Courses Data - Future Proof!
-     ========================== */
-  // To add courses: Just add course names to the array below
-  // Courses will automatically display in a 3D flip card (hover to flip)
-  // ============================================
-  
-  const mastersCourses = [
-    // Popular Masters in Construction Management courses from UT Arlington
-    "Construction Methods – Field Operations",
-    "Construction Contracts, Specifications, and Administration",
-    "Construction Cost Estimating",
-    "Construction Planning and Scheduling",
-    "Construction Management",
-    "Building Information Modeling (BIM)",
-    "Construction Finance",
-    "Construction Sustainability",
-    "Construction Productivity",
-    "Risk Management"
-  ];
-  
-  // Update course count dynamically (courses are now in HTML for reliability)
-  // This function ensures the count stays in sync with the mastersCourses array
-  function updateCourseCount() {
-    const backSubtitle = document.getElementById('coursesCount');
-    if (backSubtitle && mastersCourses.length > 0) {
-      backSubtitle.textContent = `${mastersCourses.length} Courses`;
-    }
-  }
-  
-  // Update count on load
-  updateCourseCount();
-  
-  /* =========================
      NAV: smooth scroll + active link
   ========================== */
   const navLinksAll = document.querySelectorAll('.nav-link');
