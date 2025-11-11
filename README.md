@@ -16,9 +16,11 @@ portfolio-website/
 ├── CNAME                   # Custom domain configuration
 ├── .gitignore             # Git ignore rules
 ├── README.md              # This file
-├── EMAILJS_SETUP.md       # EmailJS configuration guide
-├── DEPLOYMENT_GUIDE.md    # GitHub Pages deployment guide
-└── IMPROVEMENTS_SUGGESTIONS.md  # Future enhancement ideas
+└── docs/                  # Documentation
+    ├── EMAILJS_SETUP.md       # EmailJS configuration guide
+    ├── DEPLOYMENT_GUIDE.md    # GitHub Pages deployment guide
+    ├── IMPROVEMENTS_SUGGESTIONS.md  # Future enhancement ideas
+    └── CLEANUP_SUMMARY.md     # Project cleanup summary
 ```
 
 ## Features
@@ -55,7 +57,7 @@ portfolio-website/
 
 ## Setup & Deployment
 
-See [DEPLOYMENT_GUIDE.md](./DEPLOYMENT_GUIDE.md) for detailed instructions on:
+See [docs/DEPLOYMENT_GUIDE.md](./docs/DEPLOYMENT_GUIDE.md) for detailed instructions on:
 - Setting up GitHub Pages
 - Configuring custom domain
 - DNS configuration
@@ -63,7 +65,15 @@ See [DEPLOYMENT_GUIDE.md](./DEPLOYMENT_GUIDE.md) for detailed instructions on:
 
 ## EmailJS Configuration
 
-See [EMAILJS_SETUP.md](./EMAILJS_SETUP.md) for EmailJS setup instructions.
+See [docs/EMAILJS_SETUP.md](./docs/EMAILJS_SETUP.md) for EmailJS setup instructions.
+
+## Documentation
+
+All documentation is located in the [`docs/`](./docs/) folder:
+- [EmailJS Setup Guide](./docs/EMAILJS_SETUP.md) - EmailJS configuration instructions
+- [Deployment Guide](./docs/DEPLOYMENT_GUIDE.md) - GitHub Pages deployment instructions
+- [Improvements Suggestions](./docs/IMPROVEMENTS_SUGGESTIONS.md) - Future enhancement ideas
+- [Cleanup Summary](./docs/CLEANUP_SUMMARY.md) - Project cleanup documentation
 
 ## License
 
