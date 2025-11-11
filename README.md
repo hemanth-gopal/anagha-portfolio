@@ -17,18 +17,22 @@ portfolio-website/
 ├── .gitignore             # Git ignore rules
 ├── README.md              # This file
 └── docs/                  # Documentation
-    ├── EMAILJS_SETUP.md       # EmailJS configuration guide
-    ├── DEPLOYMENT_GUIDE.md    # GitHub Pages deployment guide
-    └── IMPROVEMENTS_SUGGESTIONS.md  # Future enhancement ideas
+    ├── EMAILJS_SETUP.md           # EmailJS configuration guide
+    ├── DEPLOYMENT_GUIDE.md         # GitHub Pages deployment guide
+    ├── IMPROVEMENTS_SUGGESTIONS.md # Future enhancement ideas
+    ├── CERTIFICATIONS_GUIDE.md     # How to add/update certifications
+    ├── EDUCATION_COURSES_GUIDE.md # How to add/update Masters courses
+    └── ACTION_PLAN.md              # Implementation action plans
 ```
 
 ## Features
 
 - **Responsive Design**: Works flawlessly on desktop, tablet, and mobile devices
-- **7 Main Sections**:
+- **8 Main Sections**:
   - **Home**: Professional introduction with animated particle background
   - **About**: Personal bio and professional background
-  - **Education**: Academic qualifications (Master's in Construction Management, B.Arch)
+  - **Education**: Academic qualifications with flippable Masters card showing courses (Master's in Construction Management, B.Arch)
+  - **Certifications**: Professional certifications and publications in a 3D carousel
   - **Skills**: Technical tools, project management, soft skills, and languages
   - **Experience**: Timeline of professional experience and achievements
   - **Projects**: Academic and professional project showcase
@@ -49,6 +53,8 @@ portfolio-website/
 - ✅ SEO optimized with meta tags and structured data
 - ✅ Accessibility compliant (ARIA labels, keyboard navigation)
 - ✅ Smooth animations and transitions
+- ✅ 3D flip card for Masters education courses
+- ✅ 3D carousel for certifications and publications
 - ✅ Contact form with EmailJS integration
 - ✅ Custom domain support (anagha.me)
 - ✅ Performance optimized
