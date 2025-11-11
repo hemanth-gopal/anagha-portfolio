@@ -2,6 +2,39 @@
 
 document.addEventListener('DOMContentLoaded', () => {
   /* =========================
+     Masters Courses Data - Future Proof!
+     ========================== */
+  // To add courses: Just add course names to the array below
+  // Courses will automatically display in a 3D flip card (hover to flip)
+  // ============================================
+  
+  const mastersCourses = [
+    // Popular Masters in Construction Management courses from UT Arlington
+    "Construction Methods – Field Operations",
+    "Construction Contracts, Specifications, and Administration",
+    "Construction Cost Estimating",
+    "Construction Planning and Scheduling",
+    "Construction Management",
+    "Building Information Modeling (BIM)",
+    "Construction Finance",
+    "Construction Sustainability",
+    "Construction Productivity",
+    "Risk Management"
+  ];
+  
+  // Update course count dynamically (courses are now in HTML for reliability)
+  // This function ensures the count stays in sync with the mastersCourses array
+  function updateCourseCount() {
+    const backSubtitle = document.getElementById('coursesCount');
+    if (backSubtitle && mastersCourses.length > 0) {
+      backSubtitle.textContent = `${mastersCourses.length} Courses`;
+    }
+  }
+  
+  // Update count on load
+  updateCourseCount();
+  
+  /* =========================
      NAV: smooth scroll + active link
   ========================== */
   const navLinksAll = document.querySelectorAll('.nav-link');
@@ -80,7 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
   );
 
   // Add animation classes to elements
-  const animatedElements = document.querySelectorAll('.skill-category, .project-card, .timeline-item, .education-item, .about-content');
+  const animatedElements = document.querySelectorAll('.skill-category, .project-card, .timeline-item, .education-item, .cert-card, .about-content');
   animatedElements.forEach(el => {
     el.classList.add('fade-in');
     animationObserver.observe(el);
@@ -632,4 +665,292 @@ document.addEventListener('DOMContentLoaded', () => {
     );
     psObserver.observe(homeSection);
   }
+
+  /* =========================
+     3D Certifications Carousel - Data-Driven
+  ========================== */
+  
+  // ============================================
+  // CERTIFICATIONS DATA - Easy to Update!
+  // ============================================
+  // To add a new certification/publication:
+  // 1. Add a new object to the array below
+  // 2. Fill in: title, organization, date, description, icon, badge, type
+  // 3. Optional: Add a link if you have a certificate URL
+  // ============================================
+  
+  const certificationsData = [
+    {
+      title: "Revit And BIM Online Certification Course",
+      organization: "Online Certification",
+      date: "June 2024 – May 2025",
+      description: "Comprehensive online certification course covering Revit and Building Information Modeling (BIM) technologies and workflows.",
+      icon: "fa-cube",
+      badge: "Certified",
+      type: "certification",
+      link: "" // Add certificate URL here if available
+    },
+    {
+      title: "Business Communication Skills",
+      organization: "Internshala Training",
+      date: "July 2020",
+      description: "Professional training in business communication skills, enhancing professional interaction and presentation abilities.",
+      icon: "fa-comments",
+      badge: "Certified",
+      type: "certification",
+      link: "" // Add certificate URL here if available
+    },
+    {
+      title: "Foundations of Digital Marketing & E-Commerce",
+      organization: "Google",
+      date: "Google Certification",
+      description: "Google certification covering digital marketing fundamentals and e-commerce strategies.",
+      icon: "fa-chart-line",
+      badge: "Google Certified",
+      type: "certification",
+      link: "" // Add certificate URL here if available
+    },
+    {
+      title: "Landscape Practices",
+      organization: "Dr. Bhanuben Nanavati College of Architecture",
+      date: "Architecture Course",
+      description: "Specialized course in landscape architecture practices and design principles.",
+      icon: "fa-leaf",
+      badge: "Completed",
+      type: "course",
+      link: "" // Add course URL here if available
+    },
+    {
+      title: "Vaastu Shastra",
+      organization: "Designopolis",
+      date: "Traditional Design",
+      description: "Training in Vaastu Shastra principles and their application in modern architectural design.",
+      icon: "fa-yin-yang",
+      badge: "Certified",
+      type: "certification",
+      link: "" // Add certificate URL here if available
+    },
+    {
+      title: "Research Paper – Heritage Walk at Chinchwad",
+      organization: "COEP NOCPDM 2021",
+      date: "2021",
+      description: "Co-authored and published under COEP's NOCPDM 2021, focusing on heritage and cultural documentation. Explored urban heritage preservation strategies.",
+      icon: "fa-book",
+      badge: "Published",
+      type: "publication",
+      link: "" // Add publication URL/DOI here if available
+    }
+  ];
+
+  // Color schemes (automatically cycles through)
+  const colorSchemes = [
+    { back: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)", icon: "linear-gradient(135deg, #667eea, #764ba2)", org: "#667eea" },
+    { back: "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)", icon: "linear-gradient(135deg, #f093fb, #f5576c)", org: "#f5576c" },
+    { back: "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)", icon: "linear-gradient(135deg, #4facfe, #00f2fe)", org: "#4facfe" },
+    { back: "linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)", icon: "linear-gradient(135deg, #43e97b, #38f9d7)", org: "#43e97b" },
+    { back: "linear-gradient(135deg, #fa709a 0%, #fee140 100%)", icon: "linear-gradient(135deg, #fa709a, #fee140)", org: "#fa709a" },
+    { back: "linear-gradient(135deg, #4ECDC4 0%, #26A69A 100%)", icon: "linear-gradient(135deg, #4ECDC4, #26A69A)", org: "#4ECDC4" }
+  ];
+
+  // Generate certification cards dynamically
+  const certCarousel = document.getElementById('certCarousel');
+  const certPrev = document.getElementById('certPrev');
+  const certNext = document.getElementById('certNext');
+  const certDots = document.getElementById('certDots');
+
+  if (certCarousel && certPrev && certNext && certDots) {
+    // Generate cards from data
+    certificationsData.forEach((cert, index) => {
+      const colorIndex = index % colorSchemes.length;
+      const colors = colorSchemes[colorIndex];
+      
+      const card = document.createElement('div');
+      card.className = `cert-card cert-color-${colorIndex + 1}`;
+      card.setAttribute('data-index', index);
+      
+      card.innerHTML = `
+        <div class="cert-card-inner">
+          <div class="cert-card-front">
+            <div class="cert-icon">
+              <i class="fas ${cert.icon}"></i>
+            </div>
+            <h3 class="cert-title">${cert.title}</h3>
+            <p class="cert-org">${cert.organization}</p>
+            <div class="cert-date">${cert.date}</div>
+          </div>
+          <div class="cert-card-back">
+            <h4>${cert.type === 'publication' ? 'Publication Details' : 'Certification Details'}</h4>
+            <p>${cert.description}</p>
+            ${cert.link ? `<a href="${cert.link}" target="_blank" rel="noopener noreferrer" class="cert-link">View Certificate →</a>` : ''}
+            <div class="cert-badge">${cert.badge}</div>
+          </div>
+        </div>
+      `;
+      
+      // Apply dynamic colors via inline styles
+      const cardBack = card.querySelector('.cert-card-back');
+      const certIcon = card.querySelector('.cert-icon');
+      const certOrg = card.querySelector('.cert-org');
+      
+      cardBack.style.background = colors.back;
+      certIcon.style.background = colors.icon;
+      certOrg.style.color = colors.org;
+      
+      certCarousel.appendChild(card);
+    });
+    
+    // Initialize carousel after cards are generated
+    initializeCarousel();
+  }
+  
+  function initializeCarousel() {
+    const certCarousel = document.getElementById('certCarousel');
+    const certPrev = document.getElementById('certPrev');
+    const certNext = document.getElementById('certNext');
+    const certDots = document.getElementById('certDots');
+    
+    if (!certCarousel || !certPrev || !certNext || !certDots) return;
+    
+    const cards = certCarousel.querySelectorAll('.cert-card');
+    if (cards.length === 0) return;
+    
+    // Clear existing dots if any
+    certDots.innerHTML = '';
+    
+    let currentIndex = 0;
+    
+    // Calculate scroll amount dynamically
+    function getScrollAmount() {
+      if (cards.length === 0) return 352; // fallback
+      const firstCard = cards[0];
+      const cardWidth = firstCard.offsetWidth || 320;
+      const gap = 32; // 2rem gap
+      return cardWidth + gap;
+    }
+    
+    let scrollAmount = getScrollAmount();
+    
+    // Recalculate on resize
+    let resizeTimeout;
+    window.addEventListener('resize', () => {
+      clearTimeout(resizeTimeout);
+      resizeTimeout = setTimeout(() => {
+        scrollAmount = getScrollAmount();
+        updateCarousel();
+      }, 150);
+    }, { passive: true });
+
+    // Create dots
+    cards.forEach((_, index) => {
+      const dot = document.createElement('button');
+      dot.className = 'carousel-dot';
+      dot.setAttribute('aria-label', `Go to certification ${index + 1}`);
+      if (index === 0) dot.classList.add('active');
+      dot.addEventListener('click', () => goToSlide(index));
+      certDots.appendChild(dot);
+    });
+
+    const dots = certDots.querySelectorAll('.carousel-dot');
+
+    function updateCarousel() {
+      const amount = getScrollAmount();
+      certCarousel.scrollTo({
+        left: currentIndex * amount,
+        behavior: 'smooth'
+      });
+      
+      // Update dots
+      dots.forEach((dot, index) => {
+        dot.classList.toggle('active', index === currentIndex);
+      });
+      
+      // Update nav buttons
+      certPrev.disabled = currentIndex === 0;
+      certNext.disabled = currentIndex === cards.length - 1;
+    }
+
+    function goToSlide(index) {
+      currentIndex = Math.max(0, Math.min(index, cards.length - 1));
+      updateCarousel();
+    }
+
+    function nextSlide() {
+      if (currentIndex < cards.length - 1) {
+        currentIndex++;
+        updateCarousel();
+      }
+    }
+
+    function prevSlide() {
+      if (currentIndex > 0) {
+        currentIndex--;
+        updateCarousel();
+      }
+    }
+
+    certNext.addEventListener('click', nextSlide);
+    certPrev.addEventListener('click', prevSlide);
+
+    // Touch/swipe support
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    certCarousel.addEventListener('touchstart', (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+
+    certCarousel.addEventListener('touchend', (e) => {
+      touchEndX = e.changedTouches[0].screenX;
+      handleSwipe();
+    }, { passive: true });
+
+    function handleSwipe() {
+      const swipeThreshold = 50;
+      const diff = touchStartX - touchEndX;
+      
+      if (Math.abs(diff) > swipeThreshold) {
+        if (diff > 0) {
+          nextSlide();
+        } else {
+          prevSlide();
+        }
+      }
+    }
+
+    // Keyboard navigation
+    certCarousel.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') {
+        e.preventDefault();
+        prevSlide();
+      } else if (e.key === 'ArrowRight') {
+        e.preventDefault();
+        nextSlide();
+      }
+    });
+
+    // Update on scroll (for snap scrolling)
+    certCarousel.addEventListener('scroll', () => {
+      const amount = getScrollAmount();
+      const newIndex = Math.round(certCarousel.scrollLeft / amount);
+      if (newIndex !== currentIndex && newIndex >= 0 && newIndex < cards.length) {
+        currentIndex = newIndex;
+        dots.forEach((dot, index) => {
+          dot.classList.toggle('active', index === currentIndex);
+        });
+        certPrev.disabled = currentIndex === 0;
+        certNext.disabled = currentIndex === cards.length - 1;
+      }
+    }, { passive: true });
+
+    // Initialize
+    updateCarousel();
+
+    // Make cards focusable for keyboard navigation
+    cards.forEach((card, index) => {
+      card.setAttribute('tabindex', '0');
+      card.setAttribute('role', 'button');
+      card.setAttribute('aria-label', `Certification ${index + 1}`);
+    });
+  }
+  
 });

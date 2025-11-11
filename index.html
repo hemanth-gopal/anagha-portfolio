@@ -53,6 +53,7 @@
                 <a href="#home" class="nav-link" role="menuitem">Home</a>
                 <a href="#about" class="nav-link" role="menuitem">About</a>
                 <a href="#education" class="nav-link" role="menuitem">Education</a>
+                <a href="#certifications" class="nav-link" role="menuitem">Certifications</a>
                 <a href="#skills" class="nav-link" role="menuitem">Skills</a>
                 <a href="#experience" class="nav-link" role="menuitem">Experience</a>
                 <a href="#projects" class="nav-link" role="menuitem">Projects</a>
@@ -113,19 +114,76 @@
                 
                 <!-- Education Timeline -->
                 <div class="education-timeline">
-                    <!-- Education Item 1 -->
-                    <div class="education-item">
+                    <!-- Education Item 1 - Masters (flippable card) -->
+                    <div class="education-item" id="masters-education">
                         <div class="education-marker"></div>
                         <div class="education-content">
-                            <div class="education-card">
-                                <div class="education-header">
-                                    <h3 class="education-degree">Master of Science in Construction Management</h3>
-                                    <div class="education-institution">The University of Texas at Arlington</div>
-                                    <div class="education-dates">2024 – Present</div>
-                                    <div class="education-location">Arlington, Texas</div>
-                                </div>
-                                <div class="education-description">
-                                    <p>Currently pursuing advanced studies in construction management, focusing on project delivery, sustainability, and innovation in the built environment.</p>
+                            <div class="education-card education-card-flip" id="mastersCard">
+                                <div class="education-card-inner">
+                                    <!-- Front Side - Education Details -->
+                                    <div class="education-card-front">
+                                        <div class="education-header">
+                                            <h3 class="education-degree">Master of Science in Construction Management</h3>
+                                            <div class="education-institution">The University of Texas at Arlington</div>
+                                            <div class="education-dates">2026 – Present</div>
+                                            <div class="education-location">Arlington, Texas</div>
+                                        </div>
+                                        <div class="education-description">
+                                            <p>Pursuing advanced studies in construction management, focusing on project delivery and sustainability.</p>
+                                        </div>
+                                        <div class="flip-hint">
+                                            <i class="fas fa-hand-pointer"></i> Hover to view courses
+                                        </div>
+                                    </div>
+                                    <!-- Back Side - Courses List -->
+                                    <div class="education-card-back" id="mastersCoursesBack">
+                                        <div class="courses-back-header">
+                                            <h3 class="courses-back-title">Course List</h3>
+                                            <p class="courses-back-subtitle" id="coursesCount">10 Courses</p>
+                                        </div>
+                                        <div class="courses-list" id="coursesListContainer">
+                                            <div class="course-item">
+                                                <span class="course-number">01</span>
+                                                <span class="course-name">Construction Methods – Field Operations</span>
+                                            </div>
+                                            <div class="course-item">
+                                                <span class="course-number">02</span>
+                                                <span class="course-name">Construction Contracts, Specifications, and Administration</span>
+                                            </div>
+                                            <div class="course-item">
+                                                <span class="course-number">03</span>
+                                                <span class="course-name">Construction Cost Estimating</span>
+                                            </div>
+                                            <div class="course-item">
+                                                <span class="course-number">04</span>
+                                                <span class="course-name">Construction Planning and Scheduling</span>
+                                            </div>
+                                            <div class="course-item">
+                                                <span class="course-number">05</span>
+                                                <span class="course-name">Construction Management</span>
+                                            </div>
+                                            <div class="course-item">
+                                                <span class="course-number">06</span>
+                                                <span class="course-name">Building Information Modeling (BIM)</span>
+                                            </div>
+                                            <div class="course-item">
+                                                <span class="course-number">07</span>
+                                                <span class="course-name">Construction Finance</span>
+                                            </div>
+                                            <div class="course-item">
+                                                <span class="course-number">08</span>
+                                                <span class="course-name">Construction Sustainability</span>
+                                            </div>
+                                            <div class="course-item">
+                                                <span class="course-number">09</span>
+                                                <span class="course-name">Construction Productivity</span>
+                                            </div>
+                                            <div class="course-item">
+                                                <span class="course-number">10</span>
+                                                <span class="course-name">Risk Management</span>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -149,6 +207,32 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications & Publications Section -->
+    <section id="certifications" class="certifications-section">
+        <div class="container">
+            <h2 class="section-title">Certifications & Publications</h2>
+            <p class="section-subtitle">Professional credentials and research contributions</p>
+            
+            <!-- 3D Carousel Container -->
+            <div class="cert-carousel-wrapper">
+                <div class="cert-carousel-container" id="certCarousel">
+                    <!-- Cards will be generated dynamically by JavaScript -->
+                </div>
+                
+                <!-- Navigation Arrows -->
+                <button class="carousel-nav carousel-prev" id="certPrev" aria-label="Previous certification">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="carousel-nav carousel-next" id="certNext" aria-label="Next certification">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+                
+                <!-- Dots Indicator -->
+                <div class="carousel-dots" id="certDots"></div>
             </div>
         </div>
     </section>
