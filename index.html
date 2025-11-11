@@ -3,34 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anagha Shamsundar Namasevi - Portfolio</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Anagha Shamsundar Namasevi - Architect and Construction Management Graduate Student. 3+ years of experience in architectural design, interiors, and landscapes. Portfolio showcasing professional projects and academic work.">
+    <meta name="keywords" content="Anagha Namasevi, Architect, Construction Management, Architecture Portfolio, BIM, Revit, AutoCAD, Architectural Design, Interior Design, Landscape Design">
+    <meta name="author" content="Anagha Shamsundar Namasevi">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Anagha Shamsundar Namasevi - Portfolio">
+    <meta property="og:description" content="Architect and Construction Management Graduate Student | 3+ years of experience in architectural design, interiors, and landscapes">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="portrait.JPG">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Anagha Shamsundar Namasevi - Portfolio">
+    <meta name="twitter:description" content="Architect and Construction Management Graduate Student | 3+ years of experience in architectural design">
+    
+    <title>Anagha Shamsundar Namasevi - Portfolio | Architect & Construction Management</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏗️</text></svg>">
+    
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+    
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </head>
 <body>
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
     <!-- Navigation -->
-    <nav class="navbar">
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
         <div class="nav-content">
             <div class="nav-logo">
-                <span class="logo-text">Anagha S. Namasevi</span>
+                <a href="#home" class="logo-text" aria-label="Anagha S. Namasevi - Home">Anagha S. Namasevi</a>
             </div>
-            <div class="nav-links" id="navLinks">
-                <a href="#home" class="nav-link">Home</a>
-                <a href="#about" class="nav-link">About</a>
-                <a href="#skills" class="nav-link">Skills</a>
-                <a href="#experience" class="nav-link">Experience</a>
-                <a href="#projects" class="nav-link">Projects</a>
-                <a href="#contact" class="nav-link">Contact</a>
+            <div class="nav-links" id="navLinks" role="menubar">
+                <a href="#home" class="nav-link" role="menuitem">Home</a>
+                <a href="#about" class="nav-link" role="menuitem">About</a>
+                <a href="#education" class="nav-link" role="menuitem">Education</a>
+                <a href="#skills" class="nav-link" role="menuitem">Skills</a>
+                <a href="#experience" class="nav-link" role="menuitem">Experience</a>
+                <a href="#projects" class="nav-link" role="menuitem">Projects</a>
+                <a href="#contact" class="nav-link" role="menuitem">Contact</a>
             </div>
-            <div class="burger-menu" id="burgerMenu">
+            <button class="burger-menu" id="burgerMenu" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navLinks">
                 <span class="burger-line"></span>
                 <span class="burger-line"></span>
                 <span class="burger-line"></span>
-            </div>
+            </button>
         </div>
     </nav>
 
+    <!-- Main Content -->
+    <main id="main-content">
     <!-- Hero Section -->
     <section id="home" class="hero-section">
         <canvas id="particlesCanvas" class="particles-canvas"></canvas>
@@ -39,7 +76,9 @@
             <p class="hero-tagline">Graduate Student in Construction Management | Background in Architecture & Design</p>
             <div class="hero-buttons">
                 <a href="#projects" class="btn btn-gold">View My Work</a>
-                <a href="#" class="btn btn-outline-gold">Download CV</a>
+                <a href="Resume - UTA.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline-gold" download="Anagha_Namasevi_Resume.pdf" aria-label="Download Anagha's resume PDF">
+                    <i class="fas fa-download" aria-hidden="true"></i> Download CV
+                </a>
             </div>
         </div>
     </section>
@@ -51,7 +90,7 @@
             <div class="about-divider"></div>
             <div class="about-content">
                 <div class="about-image">
-                    <img src="portrait.jpg" alt="Anagha Shamsundar Namasevi" class="profile-photo">
+                    <img src="portrait.JPG" alt="Anagha Shamsundar Namasevi - Architect and Construction Management Graduate Student" class="profile-photo" loading="lazy" width="250" height="250">
                 </div>
                 <div class="about-text">
                     <p class="bio-text">
@@ -65,15 +104,63 @@
         </div>
     </section>
 
+    <!-- Education Section -->
+    <section id="education" class="education-section">
+        <div class="container">
+            <div class="content-wrapper">
+                <h2 class="section-title">Education</h2>
+                <p class="section-subtitle">Academic background and qualifications</p>
+                
+                <!-- Education Timeline -->
+                <div class="education-timeline">
+                    <!-- Education Item 1 -->
+                    <div class="education-item">
+                        <div class="education-marker"></div>
+                        <div class="education-content">
+                            <div class="education-card">
+                                <div class="education-header">
+                                    <h3 class="education-degree">Master of Science in Construction Management</h3>
+                                    <div class="education-institution">The University of Texas at Arlington</div>
+                                    <div class="education-dates">2024 – Present</div>
+                                    <div class="education-location">Arlington, Texas</div>
+                                </div>
+                                <div class="education-description">
+                                    <p>Currently pursuing advanced studies in construction management, focusing on project delivery, sustainability, and innovation in the built environment.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Education Item 2 -->
+                    <div class="education-item">
+                        <div class="education-marker"></div>
+                        <div class="education-content">
+                            <div class="education-card">
+                                <div class="education-header">
+                                    <h3 class="education-degree">Bachelor of Architecture (B.Arch)</h3>
+                                    <div class="education-institution">College of Engineering, Pune (COEP)</div>
+                                    <div class="education-dates">2016 – 2021</div>
+                                    <div class="education-location">Pune, India</div>
+                                </div>
+                                <div class="education-description">
+                                    <p>Comprehensive five-year architecture program covering design, construction technology, building systems, and sustainable design practices.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Skills Section -->
     <section id="skills" class="skills-section">
         <div class="container">
-            <div class="content-wrapper">
-                <h2 class="section-title">Skills</h2>
-                <p class="section-subtitle">Technical expertise and professional competencies</p>
-                
-                <!-- Skills Grid -->
-                <div class="skills-grid">
+            <h2 class="section-title">Skills</h2>
+            <p class="section-subtitle">Technical expertise and professional competencies</p>
+            
+            <!-- Skills Grid -->
+            <div class="skills-grid">
                     <!-- Design Software -->
                     <div class="skill-category">
                         <div class="category-header">
@@ -221,6 +308,18 @@
                                 </div>
                                 <span class="skill-name">Communication</span>
                             </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <span class="skill-name">Time Management</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <i class="fas fa-tasks"></i>
+                                </div>
+                                <span class="skill-name">Adaptability</span>
+                            </div>
                         </div>
                     </div>
 
@@ -257,10 +356,21 @@
                                 </div>
                                 <span class="skill-name">Kannada</span>
                             </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <i class="fas fa-language"></i>
+                                </div>
+                                <span class="skill-name">Sanskrit</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <i class="fas fa-globe-americas"></i>
+                                </div>
+                                <span class="skill-name">Multilingual</span>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
         </div>
     </section>
 
@@ -567,7 +677,7 @@
                         </div>
                         <div class="contact-text">
                             <h4>LinkedIn</h4>
-                            <p><a href="https://linkedin.com/in/ar-anagha-namasevi" target="_blank" class="linkedin-link">linkedin.com/in/ar-anagha-namasevi</a></p>
+                            <p><a href="https://linkedin.com/in/ar-anagha-namasevi" target="_blank" rel="noopener noreferrer" class="linkedin-link" aria-label="Visit Anagha's LinkedIn profile">linkedin.com/in/ar-anagha-namasevi</a></p>
                         </div>
                     </div>
                 </div>
@@ -575,30 +685,88 @@
                 <form class="contact-form" id="contactForm">
                     <div class="form-group">
                         <input type="text" id="name" name="name" class="form-input" placeholder="Your Name" required>
+                        <span class="error-message" id="nameError"></span>
                     </div>
                     
                     <div class="form-group">
                         <input type="email" id="email" name="email" class="form-input" placeholder="Your Email" required>
+                        <span class="error-message" id="emailError"></span>
                     </div>
                     
                     <div class="form-group">
                         <textarea id="message" name="message" class="form-textarea" placeholder="Your Message" rows="5" required></textarea>
+                        <span class="error-message" id="messageError"></span>
                     </div>
                     
-                    <button type="submit" class="btn btn-teal">
-                        Send Message
+                    <div class="success-message" id="formSuccess"></div>
+                    
+                    <button type="submit" class="btn btn-teal" id="submitBtn">
+                        <i class="fas fa-paper-plane"></i> Send Message
                     </button>
                 </form>
             </div>
         </div>
     </section>
 
+    </main>
+    
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to top" title="Back to top">
+        <i class="fas fa-arrow-up" aria-hidden="true"></i>
+    </button>
+    
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" role="contentinfo">
         <div class="content-wrapper">
-            <p class="footer-text">© 2026 Anagha Shamsundar Namasevi. All rights reserved.</p>
+            <p class="footer-text">© <span id="currentYear">2026</span> Anagha Shamsundar Namasevi. All rights reserved.</p>
         </div>
     </footer>
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Anagha Shamsundar Namasevi",
+      "jobTitle": "Architect & Construction Management Graduate Student",
+      "url": "https://anagha.me",
+      "image": "portrait.JPG",
+      "email": "namasevi.anagha@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Arlington",
+        "addressRegion": "Texas",
+        "addressCountry": "US"
+      },
+      "sameAs": [
+        "https://linkedin.com/in/ar-anagha-namasevi"
+      ],
+      "alumniOf": [
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "The University of Texas at Arlington",
+          "degree": "Master of Science in Construction Management"
+        },
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "College of Engineering, Pune (COEP)",
+          "degree": "Bachelor of Architecture"
+        }
+      ],
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Graduate Student"
+      },
+      "knowsAbout": [
+        "Architecture",
+        "Construction Management",
+        "BIM",
+        "Revit",
+        "AutoCAD",
+        "Sustainable Design"
+      ]
+    }
+    </script>
 
     <script src="script.js"></script>
 </body>

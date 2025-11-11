@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
   );
 
   // Add animation classes to elements
-  const animatedElements = document.querySelectorAll('.skill-category, .project-card, .timeline-item, .about-content');
+  const animatedElements = document.querySelectorAll('.skill-category, .project-card, .timeline-item, .education-item, .about-content');
   animatedElements.forEach(el => {
     el.classList.add('fade-in');
     animationObserver.observe(el);
@@ -142,16 +142,39 @@ document.addEventListener('DOMContentLoaded', () => {
   );
 
   /* =========================
-     Parallax (subtle)
+     Parallax (subtle) - Optimized with requestAnimationFrame
   ========================== */
-  window.addEventListener('scroll', () => {
+  let ticking = false;
+  const skillCategories = document.querySelectorAll('.skill-category');
+  const photo = document.querySelector('.photo-frame');
+  
+  function updateParallax() {
+    // Disable parallax on mobile devices and for skill categories to prevent overlap
+    if (window.innerWidth <= 768) {
+      ticking = false;
+      return;
+    }
+    
     const scrolled = window.pageYOffset;
-    skillCategories.forEach((cat, i) => {
-      cat.style.transform = `translateY(${scrolled * -0.05 * (i + 1)}px)`;
-    });
-    const photo = document.querySelector('.photo-frame');
-    if (photo) photo.style.transform = `translateY(${scrolled * -0.1}px)`;
-  });
+    
+    // Disable parallax for skill categories to prevent overlap issues
+    // Only animate photo if it exists
+    if (photo) {
+      const rect = photo.getBoundingClientRect();
+      if (rect.top < window.innerHeight && rect.bottom > 0) {
+        photo.style.transform = `translateY(${scrolled * -0.1}px)`;
+      }
+    }
+    
+    ticking = false;
+  }
+  
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(updateParallax);
+      ticking = true;
+    }
+  }, { passive: true });
 
   /* =========================
      Typing effect for name
@@ -235,29 +258,73 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (burgerMenu && navLinksContainer) {
     burgerMenu.addEventListener('click', () => {
-      burgerMenu.classList.toggle('active');
+      const isExpanded = burgerMenu.classList.toggle('active');
       navLinksContainer.classList.toggle('active');
+      // Update aria-expanded for accessibility
+      burgerMenu.setAttribute('aria-expanded', isExpanded ? 'true' : 'false');
     });
     navLinksContainer.querySelectorAll('.nav-link').forEach(a =>
       a.addEventListener('click', () => {
         burgerMenu.classList.remove('active');
         navLinksContainer.classList.remove('active');
+        burgerMenu.setAttribute('aria-expanded', 'false');
       })
     );
     document.addEventListener('click', e => {
       if (!burgerMenu.contains(e.target) && !navLinksContainer.contains(e.target)) {
         burgerMenu.classList.remove('active');
         navLinksContainer.classList.remove('active');
+        burgerMenu.setAttribute('aria-expanded', 'false');
       }
     });
   }
 
   /* =========================
-     Contact form validation (optional)
+     Update Footer Year Dynamically
+  ========================== */
+  const currentYearEl = document.getElementById('currentYear');
+  if (currentYearEl) {
+    currentYearEl.textContent = new Date().getFullYear();
+  }
+
+  /* =========================
+     Back to Top Button
+  ========================== */
+  const backToTopBtn = document.getElementById('backToTop');
+  if (backToTopBtn) {
+    // Show/hide button based on scroll position
+    const toggleBackToTop = () => {
+      if (window.scrollY > 300) {
+        backToTopBtn.classList.add('visible');
+      } else {
+        backToTopBtn.classList.remove('visible');
+      }
+    };
+
+    window.addEventListener('scroll', toggleBackToTop, { passive: true });
+    toggleBackToTop(); // Check initial state
+
+    // Smooth scroll to top on click
+    backToTopBtn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  }
+
+  /* =========================
+     Contact form with EmailJS integration
   ========================== */
   const contactForm = document.getElementById('contactForm');
   if (contactForm) {
+    // Initialize EmailJS (replace with your public key)
+    // Get your public key from: https://dashboard.emailjs.com/admin/integration
+    emailjs.init('Rbu8KlNbu2aAb69b-'); // TODO: Replace with your EmailJS public key
+
     const get = id => document.getElementById(id);
+    const submitBtn = get('submitBtn');
+    
     const showError = (id, msg) => {
       const el = get(id);
       if (el) {
@@ -265,6 +332,18 @@ document.addEventListener('DOMContentLoaded', () => {
         el.classList.add('show');
       }
     };
+    
+    const showSuccess = (msg) => {
+      const success = get('formSuccess');
+      if (success) {
+        success.textContent = msg;
+        success.classList.add('show');
+        setTimeout(() => {
+          success.classList.remove('show');
+        }, 5000);
+      }
+    };
+    
     const clearErrors = () => {
       contactForm.querySelectorAll('.error-message').forEach(e => {
         e.textContent = '';
@@ -273,13 +352,15 @@ document.addEventListener('DOMContentLoaded', () => {
       contactForm.querySelectorAll('.form-input, .form-textarea').forEach(i => i.classList.remove('error'));
     };
 
-    contactForm.addEventListener('submit', e => {
+    contactForm.addEventListener('submit', async e => {
       e.preventDefault();
       clearErrors();
+      
       const name = get('name')?.value.trim() || '';
       const email = get('email')?.value.trim() || '';
       const message = get('message')?.value.trim() || '';
 
+      // Validation
       let ok = true;
       if (name.length < 2) {
         ok = false;
@@ -298,13 +379,42 @@ document.addEventListener('DOMContentLoaded', () => {
         get('message')?.classList.add('error');
       }
 
-      if (ok) {
-        const success = get('formSuccess');
-        if (success) {
-          success.textContent = 'Thanks! Your message was validated locally.';
-          success.classList.add('show');
+      if (!ok) return;
+
+      // Disable submit button
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+      }
+
+      try {
+        // Send email using EmailJS
+        // Replace 'YOUR_SERVICE_ID' and 'YOUR_TEMPLATE_ID' with your EmailJS service and template IDs
+        // Get these from: https://dashboard.emailjs.com/admin
+        const response = await emailjs.send(
+          'service_382hiu5',  // TODO: Replace with your EmailJS service ID
+          'template_cbx78qh', // TODO: Replace with your EmailJS template ID
+          {
+            from_name: name,
+            from_email: email,
+            message: message,
+            to_name: 'Anagha Namasevi'
+          }
+        );
+
+        if (response.status === 200) {
+          showSuccess('Thank you! Your message has been sent successfully. I\'ll get back to you soon.');
+          contactForm.reset();
         }
-        contactForm.reset();
+      } catch (error) {
+        console.error('EmailJS Error:', error);
+        showError('messageError', 'Sorry, there was an error sending your message. Please try again or email me directly at namasevi.anagha@gmail.com');
+      } finally {
+        // Re-enable submit button
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
+        }
       }
     });
   }
