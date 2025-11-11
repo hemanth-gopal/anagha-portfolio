@@ -1,4 +1,4 @@
-// script.js — consolidated & fixed
+// script.js - Portfolio website JavaScript
 
 document.addEventListener('DOMContentLoaded', () => {
   /* =========================
@@ -195,7 +195,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* =========================
      Skill level data-attributes
-     (fixed parenthesis bug)
   ========================== */
   function addSkillLevels() {
     const tech = document.querySelectorAll('.skill-category.technical .skill-item');
@@ -318,9 +317,8 @@ document.addEventListener('DOMContentLoaded', () => {
   ========================== */
   const contactForm = document.getElementById('contactForm');
   if (contactForm) {
-    // Initialize EmailJS (replace with your public key)
-    // Get your public key from: https://dashboard.emailjs.com/admin/integration
-    emailjs.init('Rbu8KlNbu2aAb69b-'); // TODO: Replace with your EmailJS public key
+    // Initialize EmailJS
+    emailjs.init('Rbu8KlNbu2aAb69b-');
 
     const get = id => document.getElementById(id);
     const submitBtn = get('submitBtn');
@@ -389,11 +387,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
       try {
         // Send email using EmailJS
-        // Replace 'YOUR_SERVICE_ID' and 'YOUR_TEMPLATE_ID' with your EmailJS service and template IDs
-        // Get these from: https://dashboard.emailjs.com/admin
         const response = await emailjs.send(
-          'service_382hiu5',  // TODO: Replace with your EmailJS service ID
-          'template_cbx78qh', // TODO: Replace with your EmailJS template ID
+          'service_382hiu5',
+          'template_cbx78qh',
           {
             from_name: name,
             from_email: email,
