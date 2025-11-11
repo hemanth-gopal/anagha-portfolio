@@ -1,6 +1,6 @@
 # Add Certifications
 
-**Location**: `script.js` → `certificationsData` array (~line 649)
+**Location**: `script.js` → `certificationsData` array (~line 682)
 
 ## Quick Add
 

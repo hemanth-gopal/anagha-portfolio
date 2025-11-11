@@ -952,5 +952,325 @@ document.addEventListener('DOMContentLoaded', () => {
       card.setAttribute('aria-label', `Certification ${index + 1}`);
     });
   }
+
+  /* =========================
+     DATA-DRIVEN SECTIONS - Future Proof!
+     ========================== */
+  // Uncomment the function calls at the bottom to enable data-driven content
+  // Edit the data arrays below to update Skills, Experience, and Projects
+  // ============================================
+
+  // Skills Data
+  const skillsData = [
+    {
+      title: "Design Software",
+      icon: "fa-drafting-compass",
+      skills: [
+        { name: "AutoCAD", icon: "fa-drafting-compass" },
+        { name: "Revit", icon: "fa-cube" },
+        { name: "Navisworks", icon: "fa-project-diagram" },
+        { name: "SketchUp", icon: "fa-cube" },
+        { name: "Lumion", icon: "fa-sun" },
+        { name: "Enscape", icon: "fa-eye" },
+        { name: "Dynamo", icon: "fa-cogs" },
+        { name: "Photoshop", icon: "fa-paint-brush" },
+        { name: "Twinmotion", icon: "fa-vr-cardboard" }
+      ]
+    },
+    {
+      title: "Project & Construction Management",
+      icon: "fa-hard-hat",
+      skills: [
+        { name: "Construction Documentation", icon: "fa-file-alt" },
+        { name: "Material Research", icon: "fa-search" },
+        { name: "Compliance Checks", icon: "fa-check-circle" },
+        { name: "Cost Optimization", icon: "fa-chart-line" },
+        { name: "Team Leadership", icon: "fa-users" },
+        { name: "Client Management", icon: "fa-handshake" }
+      ]
+    },
+    {
+      title: "Soft Skills",
+      icon: "fa-heart",
+      skills: [
+        { name: "Collaboration", icon: "fa-users-cog" },
+        { name: "Mentorship", icon: "fa-graduation-cap" },
+        { name: "Problem-Solving", icon: "fa-lightbulb" },
+        { name: "Communication", icon: "fa-comments" },
+        { name: "Time Management", icon: "fa-clock" },
+        { name: "Adaptability", icon: "fa-tasks" }
+      ]
+    },
+    {
+      title: "Languages",
+      icon: "fa-globe",
+      skills: [
+        { name: "English", icon: "fa-flag-usa" },
+        { name: "Hindi", icon: "fa-flag" },
+        { name: "Marathi", icon: "fa-flag" },
+        { name: "Kannada", icon: "fa-flag" },
+        { name: "Sanskrit", icon: "fa-language" },
+        { name: "Multilingual", icon: "fa-globe-americas" }
+      ]
+    }
+  ];
+
+  // Experience Data
+  const experienceData = [
+    {
+      title: "Associate Design Lead",
+      company: "Alive Design Studio",
+      dates: "Jul 2021 – Mar 2024",
+      location: "Pune, India",
+      achievements: [
+        "Managed full lifecycle of projects: design development, documentation, budgeting",
+        "Increased profitability by 30% through workflow optimization",
+        "Mentored junior designers, improving team efficiency",
+        "Drove 45% client satisfaction increase via transparent communication"
+      ]
+    },
+    {
+      title: "Student Intern",
+      company: "AVI Designs",
+      dates: "Jun 2020 – Nov 2020",
+      location: "Pune, India",
+      achievements: [
+        "Drafted technical details and 3D models supporting execution",
+        "Conducted research on construction materials for specifications"
+      ]
+    },
+    {
+      title: "Part-time Student Intern",
+      company: "Design9 Interiors",
+      dates: "Dec 2019 – Mar 2020",
+      location: "Pune, India",
+      achievements: [
+        "Assisted with design visualization and documentation",
+        "Supported on-site coordination during construction phases"
+      ]
+    },
+    {
+      title: "Mentorship",
+      company: "Mistry Architects, under Ar. Shahrukh Mistry",
+      dates: "Dec 2019 – Mar 2020",
+      location: "Pune, India",
+      achievements: [
+        "Learned sustainable and socially responsible design practices",
+        "Observed professional approaches emphasizing sustainability and empathy"
+      ]
+    }
+  ];
+
+  // Projects Data
+  const projectsData = {
+    academic: [
+      {
+        title: "B.Arch Thesis – Craft Village",
+        role: "Thesis Project (2021)",
+        description: "Designed a sustainable craft village integrating traditional crafts and community spaces. Focused on preserving cultural heritage while creating modern, functional spaces for artisans.",
+        icon: "fa-university",
+        actions: [
+          { text: "View Details", link: "" },
+          { text: "Download PDF", link: "" }
+        ]
+      },
+      {
+        title: "Research Paper – Heritage Walk at Chinchwad",
+        role: "Research Publication (2021)",
+        description: "Co-authored and published under COEP's NOCPDM 2021, focusing on heritage and cultural documentation. Explored urban heritage preservation strategies.",
+        icon: "fa-book",
+        actions: [
+          { text: "View Details", link: "" },
+          { text: "Download PDF", link: "" }
+        ]
+      }
+    ],
+    professional: [
+      {
+        title: "Interior Design Projects",
+        role: "Alive Design Studio",
+        description: "Led multiple interior and landscape projects at Alive Design Studio. Managed full project lifecycle from concept to completion.",
+        icon: "fa-home",
+        actions: [
+          { text: "View Portfolio", link: "" },
+          { text: "Case Study", link: "" }
+        ]
+      },
+      {
+        title: "BIM Design Workflows",
+        role: "Documentation & Workflow",
+        description: "Developed and implemented BIM-based design workflows and documentation processes. Streamlined project delivery and improved team efficiency.",
+        icon: "fa-cube",
+        actions: [
+          { text: "View Process", link: "" },
+          { text: "Learn More", link: "" }
+        ]
+      },
+      {
+        title: "Sustainable Design Solutions",
+        role: "Environmental Focus",
+        description: "Integrated sustainable design principles into various projects, focusing on energy efficiency and environmental responsibility.",
+        icon: "fa-leaf",
+        actions: [
+          { text: "View Details", link: "" },
+          { text: "Sustainability Report", link: "" }
+        ]
+      },
+      {
+        title: "Community Design Initiatives",
+        role: "Social Impact",
+        description: "Participated in community-focused design projects that emphasize social responsibility and community engagement.",
+        icon: "fa-users",
+        actions: [
+          { text: "View Impact", link: "" },
+          { text: "Community Report", link: "" }
+        ]
+      }
+    ]
+  };
+
+  // Generation Functions - Data-Driven Sections
+  function generateSkills() {
+    const skillsGrid = document.querySelector('.skills-grid');
+    if (!skillsGrid) {
+      console.warn('Skills grid not found');
+      return;
+    }
+    
+    skillsGrid.innerHTML = '';
+    skillsData.forEach(category => {
+      const div = document.createElement('div');
+      div.className = 'skill-category';
+      div.innerHTML = `
+        <div class="category-header">
+          <div class="category-icon"><i class="fas ${category.icon}"></i></div>
+          <h3 class="category-title">${category.title}</h3>
+        </div>
+        <div class="skills-list">
+          ${category.skills.map(s => `
+            <div class="skill-item">
+              <div class="skill-icon"><i class="fas ${s.icon}"></i></div>
+              <span class="skill-name">${s.name}</span>
+            </div>
+          `).join('')}
+        </div>
+      `;
+      skillsGrid.appendChild(div);
+    });
+  }
+
+  function generateExperience() {
+    const timeline = document.querySelector('.timeline');
+    if (!timeline) {
+      console.warn('Timeline not found');
+      return;
+    }
+    
+    timeline.innerHTML = '';
+    experienceData.forEach(exp => {
+      const div = document.createElement('div');
+      div.className = 'timeline-item';
+      div.innerHTML = `
+        <div class="timeline-marker"></div>
+        <div class="timeline-content">
+          <div class="job-card">
+            <div class="job-header">
+              <h3 class="job-title">${exp.title}</h3>
+              <div class="job-company">${exp.company}</div>
+              <div class="job-dates">${exp.dates}</div>
+              <div class="job-location">${exp.location}</div>
+            </div>
+            <div class="job-description">
+              <ul class="job-achievements">
+                ${exp.achievements.map(a => `<li>${a}</li>`).join('')}
+              </ul>
+            </div>
+          </div>
+        </div>
+      `;
+      timeline.appendChild(div);
+    });
+  }
+
+  function generateProjects() {
+    const academicGrid = document.querySelector('.projects-subsection:first-child .projects-grid');
+    const professionalGrid = document.querySelector('.projects-subsection:last-child .projects-grid');
+    
+    if (academicGrid) {
+      academicGrid.innerHTML = '';
+      projectsData.academic.forEach(p => {
+        const card = document.createElement('div');
+        card.className = 'project-card';
+        card.innerHTML = `
+          <div class="project-image">
+            <div class="project-placeholder"><i class="fas ${p.icon}"></i></div>
+            <div class="project-overlay">
+              <h4>${p.title}</h4>
+              <p>${p.role}</p>
+            </div>
+          </div>
+          <div class="project-content">
+            <h4 class="project-title">${p.title}</h4>
+            <div class="project-role">${p.role}</div>
+            <p class="project-description">${p.description}</p>
+            <div class="project-actions">
+              ${p.actions.map(a => a.link ? 
+                `<a href="${a.link}" class="btn btn-outline" target="_blank" rel="noopener">${a.text}</a>` :
+                `<button class="btn btn-outline">${a.text}</button>`
+              ).join('')}
+            </div>
+          </div>
+        `;
+        academicGrid.appendChild(card);
+      });
+    }
+    
+    if (professionalGrid) {
+      professionalGrid.innerHTML = '';
+      projectsData.professional.forEach(p => {
+        const card = document.createElement('div');
+        card.className = 'project-card';
+        card.innerHTML = `
+          <div class="project-image">
+            <div class="project-placeholder"><i class="fas ${p.icon}"></i></div>
+            <div class="project-overlay">
+              <h4>${p.title}</h4>
+              <p>${p.role}</p>
+            </div>
+          </div>
+          <div class="project-content">
+            <h4 class="project-title">${p.title}</h4>
+            <div class="project-role">${p.role}</div>
+            <p class="project-description">${p.description}</p>
+            <div class="project-actions">
+              ${p.actions.map(a => a.link ? 
+                `<a href="${a.link}" class="btn btn-outline" target="_blank" rel="noopener">${a.text}</a>` :
+                `<button class="btn btn-outline">${a.text}</button>`
+              ).join('')}
+            </div>
+          </div>
+        `;
+        professionalGrid.appendChild(card);
+      });
+    }
+  }
+
+  // Initialize data-driven sections
+  generateSkills();
+  generateExperience();
+  generateProjects();
+
+  // Re-initialize scroll animations for dynamically generated elements
+  setTimeout(() => {
+    const animatedElements = document.querySelectorAll('.skill-category, .project-card, .timeline-item');
+    animatedElements.forEach(el => {
+      if (!el.classList.contains('fade-in')) {
+        el.classList.add('fade-in');
+        if (typeof animationObserver !== 'undefined') {
+          animationObserver.observe(el);
+        }
+      }
+    });
+  }, 100);
   
 });

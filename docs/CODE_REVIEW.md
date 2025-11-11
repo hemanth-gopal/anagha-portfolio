@@ -8,7 +8,7 @@ Portfolio is **well-structured, accessible, and production-ready**. Excellent co
 
 ## ✅ Strengths
 
-- **Code Quality**: Clean HTML5, organized CSS (~3,506 lines), modular JS (~957 lines)
+- **Code Quality**: Clean HTML5, organized CSS (~3,535 lines), modular JS (~1,259 lines)
 - **Accessibility**: 21 ARIA labels, keyboard navigation, semantic HTML
 - **Performance**: Lazy loading, optimized animations, efficient queries
 - **SEO**: Meta tags, Open Graph, structured data
@@ -17,7 +17,7 @@ Portfolio is **well-structured, accessible, and production-ready**. Excellent co
 
 ## 📊 Metrics
 
-- **HTML**: ~858 lines | **CSS**: ~3,506 lines | **JS**: ~957 lines
+- **HTML**: ~857 lines | **CSS**: ~3,535 lines | **JS**: ~1,259 lines
 - **Linter Errors**: 0 ✅
 - **Accessibility**: 21 ARIA labels ✅
 

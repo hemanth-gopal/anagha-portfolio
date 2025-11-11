@@ -4,7 +4,7 @@
 
 ## Current Config
 
-**File**: `script.js` (lines ~321, 391-392)
+**File**: `script.js` (lines ~354, 423)
 
 - **Public Key**: `Rbu8KlNbu2aAb69b-`
 - **Service ID**: `service_382hiu5`
@@ -14,7 +14,7 @@
 ## Update Credentials
 
 1. Get new keys: https://dashboard.emailjs.com/admin/integration
-2. Update `script.js` lines 321, 391-392
+2. Update `script.js` lines 354 (init) and 423 (send)
 3. Test via contact form
 
 ## Troubleshooting

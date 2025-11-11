@@ -9,8 +9,8 @@
 - ✅ Performance (lazy loading, optimizations)
 - ✅ EmailJS integration
 - ✅ Responsive design
-- ✅ **Certifications section** (3D carousel)
-- ✅ **Education courses** (flippable card)
+- ✅ **Certifications section** (3D carousel, data-driven)
+- ✅ **Skills, Experience, Projects** (data-driven - edit arrays in script.js)
 
 ---
 

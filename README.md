@@ -21,7 +21,7 @@ portfolio-website/
     ├── DEPLOYMENT_GUIDE.md         # GitHub Pages deployment
     ├── IMPROVEMENTS_SUGGESTIONS.md # Future enhancements
     ├── CERTIFICATIONS_GUIDE.md     # Add/update certifications
-    ├── EDUCATION_COURSES_GUIDE.md # Add/update Masters courses
+    ├── DATA_DRIVEN_GUIDE.md        # Data-driven sections (Skills, Experience, Projects)
     └── CODE_REVIEW.md              # Code quality assessment
 ```
 
@@ -31,7 +31,7 @@ portfolio-website/
 - **8 Main Sections**:
   - **Home**: Professional introduction with animated particle background
   - **About**: Personal bio and professional background
-  - **Education**: Academic qualifications with flippable Masters card showing courses (Master's in Construction Management, B.Arch)
+  - **Education**: Academic qualifications (Master's in Construction Management, B.Arch)
   - **Certifications**: Professional certifications and publications in a 3D carousel
   - **Skills**: Technical tools, project management, soft skills, and languages
   - **Experience**: Timeline of professional experience and achievements
@@ -53,8 +53,8 @@ portfolio-website/
 - ✅ SEO optimized with meta tags and structured data
 - ✅ Accessibility compliant (ARIA labels, keyboard navigation)
 - ✅ Smooth animations and transitions
-- ✅ 3D flip card for Masters education courses
 - ✅ 3D carousel for certifications and publications
+- ✅ Data-driven sections ready (Skills, Experience, Projects - optional)
 - ✅ Contact form with EmailJS integration
 - ✅ Custom domain support (anagha.me)
 - ✅ Performance optimized
@@ -77,6 +77,8 @@ See [docs/EMAILJS_SETUP.md](./docs/EMAILJS_SETUP.md) for EmailJS setup instructi
 All documentation is located in the [`docs/`](./docs/) folder:
 - [EmailJS Setup Guide](./docs/EMAILJS_SETUP.md) - EmailJS configuration instructions
 - [Deployment Guide](./docs/DEPLOYMENT_GUIDE.md) - GitHub Pages deployment instructions
+- [Certifications Guide](./docs/CERTIFICATIONS_GUIDE.md) - Add/update certifications
+- [Data-Driven Guide](./docs/DATA_DRIVEN_GUIDE.md) - Enable data-driven sections
 - [Improvements Suggestions](./docs/IMPROVEMENTS_SUGGESTIONS.md) - Future enhancement ideas
 
 ## License
