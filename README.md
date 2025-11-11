@@ -19,8 +19,7 @@ portfolio-website/
 └── docs/                  # Documentation
     ├── EMAILJS_SETUP.md       # EmailJS configuration guide
     ├── DEPLOYMENT_GUIDE.md    # GitHub Pages deployment guide
-    ├── IMPROVEMENTS_SUGGESTIONS.md  # Future enhancement ideas
-    └── CLEANUP_SUMMARY.md     # Project cleanup summary
+    └── IMPROVEMENTS_SUGGESTIONS.md  # Future enhancement ideas
 ```
 
 ## Features
@@ -73,7 +72,6 @@ All documentation is located in the [`docs/`](./docs/) folder:
 - [EmailJS Setup Guide](./docs/EMAILJS_SETUP.md) - EmailJS configuration instructions
 - [Deployment Guide](./docs/DEPLOYMENT_GUIDE.md) - GitHub Pages deployment instructions
 - [Improvements Suggestions](./docs/IMPROVEMENTS_SUGGESTIONS.md) - Future enhancement ideas
-- [Cleanup Summary](./docs/CLEANUP_SUMMARY.md) - Project cleanup documentation
 
 ## License
 
