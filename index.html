@@ -1,48 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Anagha Shamsundar Namasevi - Architect and Construction Management Graduate Student. 3+ years of experience in architectural design, interiors, and landscapes. Portfolio showcasing professional projects and academic work.">
-    <meta name="keywords" content="Anagha Namasevi, Architect, Construction Management, Architecture Portfolio, BIM, Revit, AutoCAD, Architectural Design, Interior Design, Landscape Design">
+    <meta name="description"
+        content="Anagha Shamsundar Namasevi - Architect. 3+ years of experience in architectural design, interiors, and landscapes. Portfolio showcasing professional projects.">
+    <meta name="keywords"
+        content="Anagha Namasevi, Architect, Architecture Portfolio, BIM, Revit, AutoCAD, Architectural Design, Interior Design, Landscape Design">
     <meta name="author" content="Anagha Shamsundar Namasevi">
     <meta name="robots" content="index, follow">
-    
+
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Anagha Shamsundar Namasevi - Portfolio">
-    <meta property="og:description" content="Architect and Construction Management Graduate Student | 3+ years of experience in architectural design, interiors, and landscapes">
+    <meta property="og:description"
+        content="Architect | 3+ years of experience in architectural design, interiors, and landscapes">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="portrait.JPG">
-    
+    <meta property="og:image" content="https://anagha.me/portrait.JPG">
+    <meta property="og:url" content="https://anagha.me/">
+
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Anagha Shamsundar Namasevi - Portfolio">
-    <meta name="twitter:description" content="Architect and Construction Management Graduate Student | 3+ years of experience in architectural design">
-    
-    <title>Anagha Shamsundar Namasevi - Portfolio | Architect & Construction Management</title>
-    
+    <meta name="twitter:description" content="Architect | 3+ years of experience in architectural design">
+
+    <title>Anagha Shamsundar Namasevi - Portfolio | Architect</title>
+
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏗️</text></svg>">
-    
+    <link rel="icon" type="image/x-icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏗️</text></svg>">
+
     <!-- Preconnect for performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
-    
+
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    
+
     <!-- EmailJS SDK -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </head>
+
 <body>
     <!-- Skip to main content for accessibility -->
     <a href="#main-content" class="skip-link">Skip to main content</a>
-    
+
     <!-- Navigation -->
     <nav class="navbar" role="navigation" aria-label="Main navigation">
         <div class="nav-content">
@@ -59,7 +68,8 @@
                 <a href="#projects" class="nav-link" role="menuitem">Projects</a>
                 <a href="#contact" class="nav-link" role="menuitem">Contact</a>
             </div>
-            <button class="burger-menu" id="burgerMenu" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navLinks">
+            <button class="burger-menu" id="burgerMenu" aria-label="Toggle navigation menu" aria-expanded="false"
+                aria-controls="navLinks">
                 <span class="burger-line"></span>
                 <span class="burger-line"></span>
                 <span class="burger-line"></span>
@@ -69,125 +79,131 @@
 
     <!-- Main Content -->
     <main id="main-content">
-    <!-- Hero Section -->
-    <section id="home" class="hero-section">
-        <canvas id="particlesCanvas" class="particles-canvas"></canvas>
-        <div class="hero-content">
-            <h1 class="hero-name">Anagha Shamsundar Namasevi</h1>
-            <p class="hero-tagline">Graduate Student in Construction Management | Background in Architecture & Design</p>
-            <div class="hero-buttons">
-                <a href="#projects" class="btn btn-gold">View My Work</a>
-                <a href="Resume - UTA.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline-gold" download="Anagha_Namasevi_Resume.pdf" aria-label="Download Anagha's resume PDF">
-                    <i class="fas fa-download" aria-hidden="true"></i> Download CV
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about-section">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-divider"></div>
-            <div class="about-content">
-                <div class="about-image">
-                    <img src="portrait.JPG" alt="Anagha Shamsundar Namasevi - Architect and Construction Management Graduate Student" class="profile-photo" loading="lazy" width="250" height="250">
-                </div>
-                <div class="about-text">
-                    <p class="bio-text">
-                        Architect with 3+ years of experience in architectural design, interiors, and landscapes. 
-                        Currently pursuing a Master's in Construction Management to bridge design expertise with 
-                        project delivery, sustainability, and innovation. I believe in creating spaces that not only 
-                        function beautifully but also contribute positively to the environment and community.
-                    </p>
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <canvas id="particlesCanvas" class="particles-canvas"></canvas>
+            <div class="hero-content">
+                <h1 class="hero-name">Anagha Shamsundar Namasevi</h1>
+                <!-- <p class="hero-tagline">Graduate Student in Construction Management | Background in Architecture &
+                    Design</p> -->
+                <p class="hero-tagline">Background in Architecture & Design</p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-gold">View My Work</a>
+                    <a href="Resume - UTA.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline-gold"
+                        download="Anagha_Namasevi_Resume.pdf" aria-label="Download Anagha's resume PDF">
+                        <i class="fas fa-download" aria-hidden="true"></i> Download CV
+                    </a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Education Section -->
-    <section id="education" class="education-section">
-        <div class="container">
-            <div class="content-wrapper">
-                <h2 class="section-title">Education</h2>
-                <p class="section-subtitle">Academic background and qualifications</p>
-                
-                <!-- Education Timeline -->
-                <div class="education-timeline">
-                    <!-- Education Item 1 - Masters -->
-                    <div class="education-item">
-                        <div class="education-marker"></div>
-                        <div class="education-content">
-                            <div class="education-card">
-                                <div class="education-header">
-                                    <h3 class="education-degree">Master of Science in Construction Management</h3>
-                                    <div class="education-institution">The University of Texas at Arlington</div>
-                                    <div class="education-dates">2026 – Present</div>
-                                    <div class="education-location">Arlington, Texas</div>
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <div class="container">
+                <h2 class="section-title">About Me</h2>
+                <div class="about-divider"></div>
+                <div class="about-content">
+                    <div class="about-image">
+                        <img src="portrait.JPG" alt="Anagha Shamsundar Namasevi - Architect" class="profile-photo"
+                            loading="lazy" width="250" height="250">
+                    </div>
+                    <div class="about-text">
+                        <p class="bio-text">
+                            Architect with 3+ years of experience in architectural design, interiors, and landscapes.
+                            I believe in creating spaces that not only
+                            function beautifully but also contribute positively to the environment and community.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="education-section">
+            <div class="container">
+                <div class="content-wrapper">
+                    <h2 class="section-title">Education</h2>
+                    <p class="section-subtitle">Academic background and qualifications</p>
+
+                    <!-- Education Timeline -->
+                    <div class="education-timeline">
+                        <!-- Education Item 1 - Masters -->
+                        <!-- Education Item 1 - Masters (Commented out)
+                        <div class="education-item">
+                            <div class="education-marker"></div>
+                            <div class="education-content">
+                                <div class="education-card">
+                                    <div class="education-header">
+                                        <h3 class="education-degree">Master of Science in Construction Management</h3>
+                                        <div class="education-institution">The University of Texas at Arlington</div>
+                                        <div class="education-dates">2026 – Present</div>
+                                        <div class="education-location">Arlington, Texas</div>
+                                    </div>
+                                    <div class="education-description">
+                                        <p>Pursuing advanced studies in construction management, focusing on project
+                                            delivery and sustainability.</p>
+                                    </div>
                                 </div>
-                                <div class="education-description">
-                                    <p>Pursuing advanced studies in construction management, focusing on project delivery and sustainability.</p>
+                            </div>
+                        </div> -->
+
+                        <!-- Education Item 2 -->
+                        <div class="education-item">
+                            <div class="education-marker"></div>
+                            <div class="education-content">
+                                <div class="education-card">
+                                    <div class="education-header">
+                                        <h3 class="education-degree">Bachelor of Architecture (B.Arch)</h3>
+                                        <div class="education-institution">College of Engineering, Pune (COEP)</div>
+                                        <div class="education-dates">2016 – 2021</div>
+                                        <div class="education-location">Pune, India</div>
+                                    </div>
+                                    <div class="education-description">
+                                        <p>Comprehensive five-year architecture program covering design, construction
+                                            technology, building systems, and sustainable design practices.</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
 
-                    <!-- Education Item 2 -->
-                    <div class="education-item">
-                        <div class="education-marker"></div>
-                        <div class="education-content">
-                            <div class="education-card">
-                                <div class="education-header">
-                                    <h3 class="education-degree">Bachelor of Architecture (B.Arch)</h3>
-                                    <div class="education-institution">College of Engineering, Pune (COEP)</div>
-                                    <div class="education-dates">2016 – 2021</div>
-                                    <div class="education-location">Pune, India</div>
-                                </div>
-                                <div class="education-description">
-                                    <p>Comprehensive five-year architecture program covering design, construction technology, building systems, and sustainable design practices.</p>
-                                </div>
-                            </div>
-                        </div>
+        <!-- Certifications & Publications Section -->
+        <section id="certifications" class="certifications-section">
+            <div class="container">
+                <h2 class="section-title">Certifications & Publications</h2>
+                <p class="section-subtitle">Professional credentials and research contributions</p>
+
+                <!-- 3D Carousel Container -->
+                <div class="cert-carousel-wrapper">
+                    <div class="cert-carousel-container" id="certCarousel">
+                        <!-- Cards will be generated dynamically by JavaScript -->
                     </div>
+
+                    <!-- Navigation Arrows -->
+                    <button class="carousel-nav carousel-prev" id="certPrev" aria-label="Previous certification">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="carousel-nav carousel-next" id="certNext" aria-label="Next certification">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+
+                    <!-- Dots Indicator -->
+                    <div class="carousel-dots" id="certDots"></div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Certifications & Publications Section -->
-    <section id="certifications" class="certifications-section">
-        <div class="container">
-            <h2 class="section-title">Certifications & Publications</h2>
-            <p class="section-subtitle">Professional credentials and research contributions</p>
-            
-            <!-- 3D Carousel Container -->
-            <div class="cert-carousel-wrapper">
-                <div class="cert-carousel-container" id="certCarousel">
-                    <!-- Cards will be generated dynamically by JavaScript -->
-                </div>
-                
-                <!-- Navigation Arrows -->
-                <button class="carousel-nav carousel-prev" id="certPrev" aria-label="Previous certification">
-                    <i class="fas fa-chevron-left"></i>
-                </button>
-                <button class="carousel-nav carousel-next" id="certNext" aria-label="Next certification">
-                    <i class="fas fa-chevron-right"></i>
-                </button>
-                
-                <!-- Dots Indicator -->
-                <div class="carousel-dots" id="certDots"></div>
-            </div>
-        </div>
-    </section>
+        <!-- Skills Section -->
+        <section id="skills" class="skills-section">
+            <div class="container">
+                <h2 class="section-title">Skills</h2>
+                <p class="section-subtitle">Technical expertise and professional competencies</p>
 
-    <!-- Skills Section -->
-    <section id="skills" class="skills-section">
-        <div class="container">
-            <h2 class="section-title">Skills</h2>
-            <p class="section-subtitle">Technical expertise and professional competencies</p>
-            
-            <!-- Skills Grid -->
-            <div class="skills-grid">
+                <!-- Skills Grid -->
+                <div class="skills-grid">
                     <!-- Design Software -->
                     <div class="skill-category">
                         <div class="category-header">
@@ -398,354 +414,371 @@
                         </div>
                     </div>
                 </div>
-        </div>
-    </section>
+            </div>
+        </section>
 
-    <!-- Experience Section -->
-    <section id="experience" class="experience-section">
-        <div class="container">
-            <div class="content-wrapper">
-                <h2 class="section-title">Experience</h2>
-                <p class="section-subtitle">Professional journey and career milestones</p>
-                
-                <!-- Timeline -->
-                <div class="timeline">
-                    <!-- Timeline Item 1 -->
-                    <div class="timeline-item">
-                        <div class="timeline-marker"></div>
-                        <div class="timeline-content">
-                            <div class="job-card">
-                                <div class="job-header">
-                                    <h3 class="job-title">Associate Design Lead</h3>
-                                    <div class="job-company">Alive Design Studio</div>
-                                    <div class="job-dates">Jul 2021 – Mar 2024</div>
-                                    <div class="job-location">Pune, India</div>
-                                </div>
-                                <div class="job-description">
-                                    <ul class="job-achievements">
-                                        <li>Managed full lifecycle of projects: design development, documentation, budgeting</li>
-                                        <li>Increased profitability by 30% through workflow optimization</li>
-                                        <li>Mentored junior designers, improving team efficiency</li>
-                                        <li>Drove 45% client satisfaction increase via transparent communication</li>
-                                    </ul>
+        <!-- Experience Section -->
+        <section id="experience" class="experience-section">
+            <div class="container">
+                <div class="content-wrapper">
+                    <h2 class="section-title">Experience</h2>
+                    <p class="section-subtitle">Professional journey and career milestones</p>
+
+                    <!-- Timeline -->
+                    <div class="timeline">
+                        <!-- Timeline Item 1 -->
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <div class="job-card">
+                                    <div class="job-header">
+                                        <h3 class="job-title">Associate Design Lead</h3>
+                                        <div class="job-company">Alive Design Studio</div>
+                                        <div class="job-dates">Jul 2021 – Mar 2024</div>
+                                        <div class="job-location">Pune, India</div>
+                                    </div>
+                                    <div class="job-description">
+                                        <ul class="job-achievements">
+                                            <li>Managed full lifecycle of projects: design development, documentation,
+                                                budgeting</li>
+                                            <li>Increased profitability by 30% through workflow optimization</li>
+                                            <li>Mentored junior designers, improving team efficiency</li>
+                                            <li>Drove 45% client satisfaction increase via transparent communication
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
 
-                    <!-- Timeline Item 2 -->
-                    <div class="timeline-item">
-                        <div class="timeline-marker"></div>
-                        <div class="timeline-content">
-                            <div class="job-card">
-                                <div class="job-header">
-                                    <h3 class="job-title">Student Intern</h3>
-                                    <div class="job-company">AVI Designs</div>
-                                    <div class="job-dates">Jun 2020 – Nov 2020</div>
-                                    <div class="job-location">Pune, India</div>
-                                </div>
-                                <div class="job-description">
-                                    <ul class="job-achievements">
-                                        <li>Drafted technical details and 3D models supporting execution</li>
-                                        <li>Conducted research on construction materials for specifications</li>
-                                    </ul>
+                        <!-- Timeline Item 2 -->
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <div class="job-card">
+                                    <div class="job-header">
+                                        <h3 class="job-title">Student Intern</h3>
+                                        <div class="job-company">AVI Designs</div>
+                                        <div class="job-dates">Jun 2020 – Nov 2020</div>
+                                        <div class="job-location">Pune, India</div>
+                                    </div>
+                                    <div class="job-description">
+                                        <ul class="job-achievements">
+                                            <li>Drafted technical details and 3D models supporting execution</li>
+                                            <li>Conducted research on construction materials for specifications</li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
 
-                    <!-- Timeline Item 3 -->
-                    <div class="timeline-item">
-                        <div class="timeline-marker"></div>
-                        <div class="timeline-content">
-                            <div class="job-card">
-                                <div class="job-header">
-                                    <h3 class="job-title">Part-time Student Intern</h3>
-                                    <div class="job-company">Design9 Interiors</div>
-                                    <div class="job-dates">Dec 2019 – Mar 2020</div>
-                                    <div class="job-location">Pune, India</div>
-                                </div>
-                                <div class="job-description">
-                                    <ul class="job-achievements">
-                                        <li>Assisted with design visualization and documentation</li>
-                                        <li>Supported on-site coordination during construction phases</li>
-                                    </ul>
+                        <!-- Timeline Item 3 -->
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <div class="job-card">
+                                    <div class="job-header">
+                                        <h3 class="job-title">Part-time Student Intern</h3>
+                                        <div class="job-company">Design9 Interiors</div>
+                                        <div class="job-dates">Dec 2019 – Mar 2020</div>
+                                        <div class="job-location">Pune, India</div>
+                                    </div>
+                                    <div class="job-description">
+                                        <ul class="job-achievements">
+                                            <li>Assisted with design visualization and documentation</li>
+                                            <li>Supported on-site coordination during construction phases</li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
 
-                    <!-- Timeline Item 4 -->
-                    <div class="timeline-item">
-                        <div class="timeline-marker"></div>
-                        <div class="timeline-content">
-                            <div class="job-card">
-                                <div class="job-header">
-                                    <h3 class="job-title">Mentorship</h3>
-                                    <div class="job-company">Mistry Architects, under Ar. Shahrukh Mistry</div>
-                                    <div class="job-dates">Dec 2019 – Mar 2020</div>
-                                    <div class="job-location">Pune, India</div>
-                                </div>
-                                <div class="job-description">
-                                    <ul class="job-achievements">
-                                        <li>Learned sustainable and socially responsible design practices</li>
-                                        <li>Observed professional approaches emphasizing sustainability and empathy</li>
-                                    </ul>
+                        <!-- Timeline Item 4 -->
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <div class="job-card">
+                                    <div class="job-header">
+                                        <h3 class="job-title">Mentorship</h3>
+                                        <div class="job-company">Mistry Architects, under Ar. Shahrukh Mistry</div>
+                                        <div class="job-dates">Dec 2019 – Mar 2020</div>
+                                        <div class="job-location">Pune, India</div>
+                                    </div>
+                                    <div class="job-description">
+                                        <ul class="job-achievements">
+                                            <li>Learned sustainable and socially responsible design practices</li>
+                                            <li>Observed professional approaches emphasizing sustainability and empathy
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects-section">
-        <div class="container">
-            <div class="content-wrapper">
-                <h2 class="section-title">Projects & Portfolio</h2>
-                <p class="section-subtitle">Academic and professional work showcasing design expertise</p>
-                
-                <!-- Academic Projects -->
-                <div class="projects-subsection">
-                    <h3 class="subsection-title">Academic Projects</h3>
-                    <div class="projects-grid">
-                        <!-- Project 1 -->
-                        <div class="project-card">
-                            <div class="project-image">
-                                <div class="project-placeholder">
-                                    <i class="fas fa-university"></i>
-                                </div>
-                                <div class="project-overlay">
-                                    <h4>B.Arch Thesis – Craft Village</h4>
-                                    <p>Thesis Project (2021)</p>
-                                </div>
-                            </div>
-                            <div class="project-content">
-                                <h4 class="project-title">B.Arch Thesis – Craft Village</h4>
-                                <div class="project-role">Thesis Project (2021)</div>
-                                <p class="project-description">
-                                    Designed a sustainable craft village integrating traditional crafts and community spaces. 
-                                    Focused on preserving cultural heritage while creating modern, functional spaces for artisans.
-                                </p>
-                                <div class="project-actions">
-                                    <button class="btn btn-outline">View Details</button>
-                                    <button class="btn btn-outline">Download PDF</button>
-                                </div>
-                            </div>
-                        </div>
+        <!-- Projects Section -->
+        <section id="projects" class="projects-section">
+            <div class="container">
+                <div class="content-wrapper">
+                    <h2 class="section-title">Projects & Portfolio</h2>
+                    <p class="section-subtitle">Academic and professional work showcasing design expertise</p>
 
-                        <!-- Project 2 -->
-                        <div class="project-card">
-                            <div class="project-image">
-                                <div class="project-placeholder">
-                                    <i class="fas fa-book"></i>
+                    <!-- Academic Projects -->
+                    <div class="projects-subsection">
+                        <h3 class="subsection-title">Academic Projects</h3>
+                        <div class="projects-grid">
+                            <!-- Project 1 -->
+                            <div class="project-card">
+                                <div class="project-image">
+                                    <div class="project-placeholder">
+                                        <i class="fas fa-university"></i>
+                                    </div>
+                                    <div class="project-overlay">
+                                        <h4>B.Arch Thesis – Craft Village</h4>
+                                        <p>Thesis Project (2021)</p>
+                                    </div>
                                 </div>
-                                <div class="project-overlay">
-                                    <h4>Research Paper – Heritage Walk</h4>
-                                    <p>Research Publication (2021)</p>
+                                <div class="project-content">
+                                    <h4 class="project-title">B.Arch Thesis – Craft Village</h4>
+                                    <div class="project-role">Thesis Project (2021)</div>
+                                    <p class="project-description">
+                                        Designed a sustainable craft village integrating traditional crafts and
+                                        community spaces.
+                                        Focused on preserving cultural heritage while creating modern, functional spaces
+                                        for artisans.
+                                    </p>
+                                    <div class="project-actions">
+                                        <button class="btn btn-outline">View Case Study</button>
+                                        <button class="btn btn-outline">Download PDF</button>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="project-content">
-                                <h4 class="project-title">Research Paper – Heritage Walk at Chinchwad</h4>
-                                <div class="project-role">Research Publication (2021)</div>
-                                <p class="project-description">
-                                    Co-authored and published under COEP's NOCPDM 2021, focusing on heritage and cultural 
-                                    documentation. Explored urban heritage preservation strategies.
-                                </p>
-                                <div class="project-actions">
-                                    <button class="btn btn-outline">View Details</button>
-                                    <button class="btn btn-outline">Download PDF</button>
+
+                            <!-- Project 2 -->
+                            <div class="project-card">
+                                <div class="project-image">
+                                    <div class="project-placeholder">
+                                        <i class="fas fa-book"></i>
+                                    </div>
+                                    <div class="project-overlay">
+                                        <h4>Research Paper – Heritage Walk</h4>
+                                        <p>Research Publication (2021)</p>
+                                    </div>
+                                </div>
+                                <div class="project-content">
+                                    <h4 class="project-title">Research Paper – Heritage Walk at Chinchwad</h4>
+                                    <div class="project-role">Research Publication (2021)</div>
+                                    <p class="project-description">
+                                        Co-authored and published under COEP's NOCPDM 2021, focusing on heritage and
+                                        cultural
+                                        documentation. Explored urban heritage preservation strategies.
+                                    </p>
+                                    <div class="project-actions">
+                                        <div class="project-actions">
+                                            <button class="btn btn-outline">Read Paper</button>
+                                            <button class="btn btn-outline">Download PDF</button>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Professional Projects -->
-                <div class="projects-subsection">
-                    <h3 class="subsection-title">Professional Projects</h3>
-                    <div class="projects-grid">
-                        <!-- Project 3 -->
-                        <div class="project-card">
-                            <div class="project-image">
-                                <div class="project-placeholder">
-                                    <i class="fas fa-home"></i>
+                    <!-- Professional Projects -->
+                    <div class="projects-subsection">
+                        <h3 class="subsection-title">Professional Projects</h3>
+                        <div class="projects-grid">
+                            <!-- Project 3 -->
+                            <div class="project-card">
+                                <div class="project-image">
+                                    <div class="project-placeholder">
+                                        <i class="fas fa-home"></i>
+                                    </div>
+                                    <div class="project-overlay">
+                                        <h4>Interior Design Projects</h4>
+                                        <p>Alive Design Studio</p>
+                                    </div>
                                 </div>
-                                <div class="project-overlay">
-                                    <h4>Interior Design Projects</h4>
-                                    <p>Alive Design Studio</p>
+                                <div class="project-content">
+                                    <h4 class="project-title">Interior Design Projects</h4>
+                                    <div class="project-role">Alive Design Studio</div>
+                                    <p class="project-description">
+                                        Led multiple interior and landscape projects at Alive Design Studio.
+                                        Managed full project lifecycle from concept to completion.
+                                    </p>
+                                    <div class="project-actions">
+                                        <div class="project-actions">
+                                            <button class="btn btn-outline">View Case Study</button>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="project-content">
-                                <h4 class="project-title">Interior Design Projects</h4>
-                                <div class="project-role">Alive Design Studio</div>
-                                <p class="project-description">
-                                    Led multiple interior and landscape projects at Alive Design Studio. 
-                                    Managed full project lifecycle from concept to completion.
-                                </p>
-                                <div class="project-actions">
-                                    <button class="btn btn-outline">View Portfolio</button>
-                                    <button class="btn btn-outline">Case Study</button>
-                                </div>
-                            </div>
-                        </div>
 
-                        <!-- Project 4 -->
-                        <div class="project-card">
-                            <div class="project-image">
-                                <div class="project-placeholder">
-                                    <i class="fas fa-cube"></i>
+                            <!-- Project 4 -->
+                            <div class="project-card">
+                                <div class="project-image">
+                                    <div class="project-placeholder">
+                                        <i class="fas fa-cube"></i>
+                                    </div>
+                                    <div class="project-overlay">
+                                        <h4>BIM Design Workflows</h4>
+                                        <p>Documentation & Workflow</p>
+                                    </div>
                                 </div>
-                                <div class="project-overlay">
-                                    <h4>BIM Design Workflows</h4>
-                                    <p>Documentation & Workflow</p>
+                                <div class="project-content">
+                                    <h4 class="project-title">BIM Design Workflows</h4>
+                                    <div class="project-role">Documentation & Workflow</div>
+                                    <p class="project-description">
+                                        Developed and implemented BIM-based design workflows and documentation
+                                        processes.
+                                        Streamlined project delivery and improved team efficiency.
+                                    </p>
+                                    <div class="project-actions">
+                                        <button class="btn btn-outline">View Case Study</button>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="project-content">
-                                <h4 class="project-title">BIM Design Workflows</h4>
-                                <div class="project-role">Documentation & Workflow</div>
-                                <p class="project-description">
-                                    Developed and implemented BIM-based design workflows and documentation processes. 
-                                    Streamlined project delivery and improved team efficiency.
-                                </p>
-                                <div class="project-actions">
-                                    <button class="btn btn-outline">View Process</button>
-                                    <button class="btn btn-outline">Learn More</button>
-                                </div>
-                            </div>
-                        </div>
 
-                        <!-- Project 5 -->
-                        <div class="project-card">
-                            <div class="project-image">
-                                <div class="project-placeholder">
-                                    <i class="fas fa-leaf"></i>
+                            <!-- Project 5 -->
+                            <div class="project-card">
+                                <div class="project-image">
+                                    <div class="project-placeholder">
+                                        <i class="fas fa-leaf"></i>
+                                    </div>
+                                    <div class="project-overlay">
+                                        <h4>Sustainable Design Solutions</h4>
+                                        <p>Environmental Focus</p>
+                                    </div>
                                 </div>
-                                <div class="project-overlay">
-                                    <h4>Sustainable Design Solutions</h4>
-                                    <p>Environmental Focus</p>
+                                <div class="project-content">
+                                    <h4 class="project-title">Sustainable Design Solutions</h4>
+                                    <div class="project-role">Environmental Focus</div>
+                                    <p class="project-description">
+                                        Integrated sustainable design principles into various projects,
+                                        focusing on energy efficiency and environmental responsibility.
+                                    </p>
+                                    <div class="project-actions">
+                                        <button class="btn btn-outline">View Details</button>
+                                        <button class="btn btn-outline">Sustainability Report</button>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="project-content">
-                                <h4 class="project-title">Sustainable Design Solutions</h4>
-                                <div class="project-role">Environmental Focus</div>
-                                <p class="project-description">
-                                    Integrated sustainable design principles into various projects, 
-                                    focusing on energy efficiency and environmental responsibility.
-                                </p>
-                                <div class="project-actions">
-                                    <button class="btn btn-outline">View Details</button>
-                                    <button class="btn btn-outline">Sustainability Report</button>
-                                </div>
-                            </div>
-                        </div>
 
-                        <!-- Project 6 -->
-                        <div class="project-card">
-                            <div class="project-image">
-                                <div class="project-placeholder">
-                                    <i class="fas fa-users"></i>
+                            <!-- Project 6 -->
+                            <div class="project-card">
+                                <div class="project-image">
+                                    <div class="project-placeholder">
+                                        <i class="fas fa-users"></i>
+                                    </div>
+                                    <div class="project-overlay">
+                                        <h4>Community Design Initiatives</h4>
+                                        <p>Social Impact</p>
+                                    </div>
                                 </div>
-                                <div class="project-overlay">
-                                    <h4>Community Design Initiatives</h4>
-                                    <p>Social Impact</p>
-                                </div>
-                            </div>
-                            <div class="project-content">
-                                <h4 class="project-title">Community Design Initiatives</h4>
-                                <div class="project-role">Social Impact</div>
-                                <p class="project-description">
-                                    Participated in community-focused design projects that emphasize 
-                                    social responsibility and community engagement.
-                                </p>
-                                <div class="project-actions">
-                                    <button class="btn btn-outline">View Impact</button>
-                                    <button class="btn btn-outline">Community Report</button>
+                                <div class="project-content">
+                                    <h4 class="project-title">Community Design Initiatives</h4>
+                                    <div class="project-role">Social Impact</div>
+                                    <p class="project-description">
+                                        Participated in community-focused design projects that emphasize
+                                        social responsibility and community engagement.
+                                    </p>
+                                    <div class="project-actions">
+                                        <button class="btn btn-outline">View Impact</button>
+                                        <button class="btn btn-outline">Community Report</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact-section">
-        <div class="container">
-            <h2 class="section-title">Let's Collaborate</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-info-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <h2 class="section-title">Let's Collaborate</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="contact-info-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Email</h4>
+                                <p><a href="mailto:namasevi.anagha@gmail.com"
+                                        class="email-link">namasevi.anagha@gmail.com</a></p>
+                            </div>
                         </div>
-                        <div class="contact-text">
-                            <h4>Email</h4>
-                            <p><a href="mailto:namasevi.anagha@gmail.com" class="email-link">namasevi.anagha@gmail.com</a></p>
+
+                        <div class="contact-info-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Location</h4>
+                                <p>Pune, India</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-info-item">
+                            <div class="contact-icon">
+                                <i class="fab fa-linkedin-in"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>LinkedIn</h4>
+                                <p><a href="https://linkedin.com/in/ar-anagha-namasevi" target="_blank"
+                                        rel="noopener noreferrer" class="linkedin-link"
+                                        aria-label="Visit Anagha's LinkedIn profile">linkedin.com/in/ar-anagha-namasevi</a>
+                                </p>
+                            </div>
                         </div>
                     </div>
-                    
-                    <div class="contact-info-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
+
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" class="form-input" placeholder="Your Name"
+                                required>
+                            <span class="error-message" id="nameError"></span>
                         </div>
-                        <div class="contact-text">
-                            <h4>Location</h4>
-                            <p>Arlington, Texas</p>
+
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" class="form-input" placeholder="Your Email"
+                                required>
+                            <span class="error-message" id="emailError"></span>
                         </div>
-                    </div>
-                    
-                    <div class="contact-info-item">
-                        <div class="contact-icon">
-                            <i class="fab fa-linkedin-in"></i>
+
+                        <div class="form-group">
+                            <textarea id="message" name="message" class="form-textarea" placeholder="Your Message"
+                                rows="5" required></textarea>
+                            <span class="error-message" id="messageError"></span>
                         </div>
-                        <div class="contact-text">
-                            <h4>LinkedIn</h4>
-                            <p><a href="https://linkedin.com/in/ar-anagha-namasevi" target="_blank" rel="noopener noreferrer" class="linkedin-link" aria-label="Visit Anagha's LinkedIn profile">linkedin.com/in/ar-anagha-namasevi</a></p>
-                        </div>
-                    </div>
+
+                        <div class="success-message" id="formSuccess"></div>
+
+                        <button type="submit" class="btn btn-teal" id="submitBtn">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
                 </div>
-                
-                <form class="contact-form" id="contactForm">
-                    <div class="form-group">
-                        <input type="text" id="name" name="name" class="form-input" placeholder="Your Name" required>
-                        <span class="error-message" id="nameError"></span>
-                    </div>
-                    
-                    <div class="form-group">
-                        <input type="email" id="email" name="email" class="form-input" placeholder="Your Email" required>
-                        <span class="error-message" id="emailError"></span>
-                    </div>
-                    
-                    <div class="form-group">
-                        <textarea id="message" name="message" class="form-textarea" placeholder="Your Message" rows="5" required></textarea>
-                        <span class="error-message" id="messageError"></span>
-                    </div>
-                    
-                    <div class="success-message" id="formSuccess"></div>
-                    
-                    <button type="submit" class="btn btn-teal" id="submitBtn">
-                        <i class="fas fa-paper-plane"></i> Send Message
-                    </button>
-                </form>
             </div>
-        </div>
-    </section>
+        </section>
 
     </main>
-    
+
     <!-- Back to Top Button -->
     <button id="backToTop" class="back-to-top" aria-label="Back to top" title="Back to top">
         <i class="fas fa-arrow-up" aria-hidden="true"></i>
     </button>
-    
+
     <!-- Footer -->
     <footer class="footer" role="contentinfo">
         <div class="content-wrapper">
-            <p class="footer-text">© <span id="currentYear">2026</span> Anagha Shamsundar Namasevi. All rights reserved.</p>
+            <p class="footer-text">© <span id="currentYear">2026</span> Anagha Shamsundar Namasevi. All rights reserved.
+            </p>
         </div>
     </footer>
 
@@ -755,35 +788,35 @@
       "@context": "https://schema.org",
       "@type": "Person",
       "name": "Anagha Shamsundar Namasevi",
-      "jobTitle": "Architect & Construction Management Graduate Student",
+      "jobTitle": "Architect",
       "url": "https://anagha.me",
       "image": "portrait.JPG",
       "email": "namasevi.anagha@gmail.com",
       "address": {
         "@type": "PostalAddress",
-        "addressLocality": "Arlington",
-        "addressRegion": "Texas",
-        "addressCountry": "US"
+        "addressLocality": "Pune",
+        "addressRegion": "Maharashtra",
+        "addressCountry": "India"
       },
       "sameAs": [
         "https://linkedin.com/in/ar-anagha-namasevi"
       ],
       "alumniOf": [
-        {
+        /* {
           "@type": "CollegeOrUniversity",
           "name": "The University of Texas at Arlington",
           "degree": "Master of Science in Construction Management"
-        },
+        }, */
         {
           "@type": "CollegeOrUniversity",
           "name": "College of Engineering, Pune (COEP)",
           "degree": "Bachelor of Architecture"
         }
       ],
-      "worksFor": {
+        /* "worksFor": {
         "@type": "Organization",
         "name": "Graduate Student"
-      },
+      }, */
       "knowsAbout": [
         "Architecture",
         "Construction Management",
@@ -797,4 +830,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Project Case Study - Anagha Shamsundar Namasevi">
+    <meta name="robots" content="index, follow">
+
+    <title>Project Title | Anagha Shamsundar Namasevi</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏗️</text></svg>">
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        /* Project Specific Styles - To be moved to styles.css eventually */
+        .project-hero {
+            height: 60vh;
+            background: linear-gradient(rgba(26, 26, 46, 0.8), rgba(26, 26, 46, 0.8)), url('https://via.placeholder.com/1920x1080') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            margin-top: 60px;
+            /* Navbar height */
+        }
+
+        .project-meta {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            color: #c9a227;
+        }
+
+        .project-content-section {
+            padding: 4rem 0;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .project-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .gallery-item {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.02);
+        }
+
+        @media (max-width: 768px) {
+            .project-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .project-hero {
+                height: 50vh;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <div class="nav-content">
+            <div class="nav-logo">
+                <a href="index.html" class="logo-text">Anagha S. Namasevi</a>
+            </div>
+            <div class="nav-links">
+                <a href="index.html#projects" class="nav-link"><i class="fas fa-arrow-left"></i> Back to Projects</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="project-hero">
+        <div class="container">
+            <h1 class="hero-name">Project Title Goes Here</h1>
+            <div class="project-meta">
+                <div class="meta-item">
+                    <i class="fas fa-calendar"></i> 2021
+                </div>
+                <div class="meta-item">
+                    <i class="fas fa-tag"></i> Academic / Thesis
+                </div>
+                <div class="meta-item">
+                    <i class="fas fa-map-marker-alt"></i> Location, Country
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Overview Section -->
+        <section class="project-content-section">
+            <div class="container">
+                <div class="project-grid">
+                    <div class="project-text">
+                        <h2 class="section-title" style="text-align: left; font-size: 2rem;">The Challenge</h2>
+                        <div class="about-divider" style="margin: 0 0 2rem 0;"></div>
+                        <p class="bio-text">
+                            Describe the problem statement or the design challenge here. What were the constraints?
+                            What was the site context? This section sets the stage for your solution.
+                        </p>
+                        <br>
+                        <h3 style="margin-bottom: 1rem; color: #1a1a2e;">Key Objectives</h3>
+                        <ul style="list-style-type: none; padding: 0;">
+                            <li style="margin-bottom: 0.5rem;"><i class="fas fa-check"
+                                    style="color: #c9a227; margin-right: 10px;"></i> Objective 1</li>
+                            <li style="margin-bottom: 0.5rem;"><i class="fas fa-check"
+                                    style="color: #c9a227; margin-right: 10px;"></i> Objective 2</li>
+                            <li style="margin-bottom: 0.5rem;"><i class="fas fa-check"
+                                    style="color: #c9a227; margin-right: 10px;"></i> Objective 3</li>
+                        </ul>
+                    </div>
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/600x400" alt="Project Context"
+                            style="width: 100%; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Solution Section -->
+        <section class="project-content-section" style="background-color: #f8f9fa;">
+            <div class="container">
+                <h2 class="section-title">The Solution</h2>
+                <div class="about-divider"></div>
+                <p class="bio-text" style="text-align: center; max-width: 800px; margin: 0 auto 3rem auto;">
+                    Explain your design approach. How did you solve the problem? What technologies or methodologies did
+                    you use (BIM, Revit, Sustainable Design)?
+                </p>
+
+                <!-- Gallery -->
+                <div class="project-gallery">
+                    <img src="https://via.placeholder.com/400x300" alt="Design Detail 1" class="gallery-item">
+                    <img src="https://via.placeholder.com/400x300" alt="Design Detail 2" class="gallery-item">
+                    <img src="https://via.placeholder.com/400x300" alt="Design Detail 3" class="gallery-item">
+                    <img src="https://via.placeholder.com/400x300" alt="Design Detail 4" class="gallery-item">
+                    <img src="https://via.placeholder.com/400x300" alt="Design Detail 5" class="gallery-item">
+                    <img src="https://via.placeholder.com/400x300" alt="Design Detail 6" class="gallery-item">
+                </div>
+            </div>
+        </section>
+
+        <!-- Outcome Section -->
+        <section class="project-content-section">
+            <div class="container" style="text-align: center;">
+                <h2 class="section-title">Outcome & Impact</h2>
+                <div class="about-divider"></div>
+                <p class="bio-text" style="max-width: 800px; margin: 0 auto 2rem auto;">
+                    What was the result? Did you achieve the sustainability goals? Was the client happy?
+                    Mention any awards or recognition this project received.
+                </p>
+                <a href="#" class="btn btn-gold"><i class="fas fa-download"></i> Download Full PDF</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="content-wrapper">
+            <p class="footer-text">© <span id="currentYear">2024</span> Anagha Shamsundar Namasevi. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

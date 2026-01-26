@@ -26,3 +26,6 @@ npm-debug.log*
 .env
 .env.local
 
+
+# Large file backups
+portrait_orig.JPG

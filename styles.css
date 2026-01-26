@@ -8,9 +8,13 @@
 body {
     font-family: 'Open Sans', sans-serif;
     background-color: #ffffff;
-    color: #1a1a2e;
+    color: #1a1a2e; /* Navy */
     line-height: 1.6;
     scroll-behavior: smooth;
+    --primary-color: #1a1a2e;
+    --accent-color: #c9a227; /* Gold */
+    --text-color: #555555;
+    --light-bg: #f8f9fa;
 }
 
 /* Skip to main content link (accessibility) */
@@ -564,20 +568,20 @@ section {
 
 /* Apple-style Button Styles */
 .btn-gold {
-    background: linear-gradient(135deg, #007AFF, #0056CC);
+    background: linear-gradient(135deg, #c9a227, #b08d1e);
     color: #ffffff;
     border: none;
     border-radius: 12px;
     font-weight: 600;
     letter-spacing: 0.5px;
     transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    box-shadow: 0 4px 14px rgba(0, 122, 255, 0.3);
+    box-shadow: 0 4px 14px rgba(201, 162, 39, 0.3);
 }
 
 .btn-gold:hover {
-    background: linear-gradient(135deg, #0056CC, #003D99);
+    background: linear-gradient(135deg, #b08d1e, #967819);
     transform: translateY(-1px);
-    box-shadow: 0 8px 25px rgba(0, 122, 255, 0.4);
+    box-shadow: 0 8px 25px rgba(201, 162, 39, 0.4);
 }
 
 .btn-outline-gold {
@@ -613,9 +617,9 @@ section {
 }
 
 .btn-teal:hover {
-    background: linear-gradient(135deg, #26A69A, #00695C);
+    background: linear-gradient(135deg, #1a1a2e, #0f0f1a); /* Changed to Navy on hover for better consistency */
     transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(78, 205, 196, 0.4);
+    box-shadow: 0 8px 25px rgba(26, 26, 46, 0.4);
 }
 
 .btn-teal i {
