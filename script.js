@@ -386,24 +386,64 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       try {
-        // Send email using EmailJS
-        const response = await emailjs.send(
-          'service_382hiu5',
-          'template_cbx78qh',
-          {
-            from_name: name,
-            from_email: email,
-            message: message,
-            to_name: 'Anagha Namasevi'
-          }
-        );
+        let sent = false;
 
-        if (response.status === 200) {
+        // 1. Try EmailJS
+        try {
+          if (window.emailjs) {
+            const response = await emailjs.send(
+              'service_382hiu5',
+              'template_cbx78qh',
+              {
+                from_name: name,
+                from_email: email,
+                reply_to: email,
+                message: message,
+                to_name: 'Anagha Namasevi'
+              }
+            );
+
+            if (response.status === 200 || response.text === 'OK') {
+              sent = true;
+            }
+          }
+        } catch (emailjsErr) {
+          console.warn('EmailJS delivery failed, trying fallback email service...', emailjsErr);
+        }
+
+        // 2. Fallback to FormSubmit AJAX endpoint if EmailJS failed
+        if (!sent) {
+          try {
+            const fallbackRes = await fetch('https://formsubmit.co/ajax/namasevi.anagha@gmail.com', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+              },
+              body: JSON.stringify({
+                name: name,
+                email: email,
+                message: message,
+                _subject: `New Portfolio Message from ${name}`
+              })
+            });
+            const fallbackData = await fallbackRes.json();
+            if (fallbackRes.ok || fallbackData.success === 'true' || fallbackData.success === true) {
+              sent = true;
+            }
+          } catch (fallbackErr) {
+            console.error('Fallback email service error:', fallbackErr);
+          }
+        }
+
+        if (sent) {
           showSuccess('Thank you! Your message has been sent successfully. I\'ll get back to you soon.');
           contactForm.reset();
+        } else {
+          showError('messageError', 'Could not send message automatically. Please email me directly at namasevi.anagha@gmail.com');
         }
       } catch (error) {
-        console.error('EmailJS Error:', error);
+        console.error('Email Submission Error:', error);
         showError('messageError', 'Sorry, there was an error sending your message. Please try again or email me directly at namasevi.anagha@gmail.com');
       } finally {
         // Re-enable submit button
