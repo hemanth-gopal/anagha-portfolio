@@ -985,45 +985,61 @@ document.addEventListener('DOMContentLoaded', () => {
   // Experience Data
   const experienceData = [
     {
+      title: "Interior Designer",
+      company: "Euphoria Interiors",
+      dates: "Mar 2026 – Jun 2026",
+      location: "Dubai (Remote, India)",
+      achievements: [
+        "Collaborated with clients to understand design requirements and develop concept-driven interior design solutions.",
+        "Coordinated with architects, 3D visualizers, and execution teams to deliver cohesive, execution-ready designs.",
+        "Curated materials, finishes, and furnishings to create functional spaces aligned with client vision and project objectives."
+      ]
+    },
+    {
       title: "Associate Design Lead",
       company: "Alive Design Studio",
       dates: "Jul 2021 – Mar 2024",
       location: "Pune, India",
       achievements: [
-        "Managed full lifecycle of projects: design development, documentation, budgeting",
-        "Increased profitability by 30% through workflow optimization",
-        "Mentored junior designers, improving team efficiency",
-        "Drove 45% client satisfaction increase via transparent communication"
+        "Managed the full lifecycle of architectural projects, overseeing design development, documentation, and adherence to schedule and budget constraints.",
+        "Drove a 30% increase in business profitability by optimizing design workflows and implementing innovative strategies to enhance project efficiency.",
+        "Engineered constructible architectural designs by coordinating and integrating structural, and specialist consultant requirements.",
+        "Managed compliance checks throughout the design process, guaranteeing adherence to relevant building codes, regulations, and quality benchmarks.",
+        "Led cross-functional collaboration between internal teams, external consultants, and clients to resolve technical challenges and optimize project workflows.",
+        "Increased client satisfaction by 45% and secured repeat business through proactive communication, transparent reporting, and effective expectation management.",
+        "Enhanced team capabilities by mentoring junior designers on firm standards, project workflows, and advanced software usage."
       ]
     },
     {
-      title: "Student Intern",
+      title: "Student Intern (Full Time)",
       company: "AVI Designs",
       dates: "Jun 2020 – Nov 2020",
       location: "Pune, India",
       achievements: [
-        "Drafted technical details and 3D models supporting execution",
-        "Conducted research on construction materials for specifications"
+        "Contributed to project phases by developing technical drafts (AutoCAD) and 3D models (SketchUp) used for design visualization and documentation.",
+        "Prepared and organized essential project documentation and presentation materials, supporting communication between team members and stakeholders.",
+        "Organized and maintained project files and documentation, contributing to efficient information management for the design team."
       ]
     },
     {
       title: "Part-time Student Intern",
-      company: "Design9 Interiors",
+      company: "Design9 - Interiors and Consultation",
       dates: "Dec 2019 – Mar 2020",
       location: "Pune, India",
       achievements: [
-        "Assisted with design visualization and documentation",
-        "Supported on-site coordination during construction phases"
+        "Generated 3D models (SketchUp) aiding design communication for client presentations and internal development.",
+        "Drafted technical details (AutoCAD) and prepared documentation packages supporting project execution.",
+        "Assisted with material selection verification and supported on-site coordination during construction phases."
       ]
     },
     {
-      title: "Mentorship",
+      title: "Mentorship - Season 1 (LIXIL)",
       company: "Mistry Architects, under Ar. Shahrukh Mistry",
       dates: "Dec 2019 – Mar 2020",
       location: "Pune, India",
       achievements: [
-        "Learned sustainable and socially responsible design practices",
-        "Observed professional approaches emphasizing sustainability and empathy"
+        "Gained hands-on experience learning sustainable and socially responsible architectural practices while engaging in value-based problem-solving emphasizing empathy and holistic solutions.",
+        "Developed a deeper understanding of professional project approaches emphasizing environmental sustainability and community impact."
       ]
     }
   ];
@@ -1142,10 +1158,12 @@ document.addEventListener('DOMContentLoaded', () => {
         <div class="timeline-content">
           <div class="job-card">
             <div class="job-header">
-              <h3 class="job-title">${exp.title}</h3>
+              <div class="job-header-top">
+                <h3 class="job-title">${exp.title}</h3>
+                <span class="job-dates"><i class="far fa-calendar-alt"></i> ${exp.dates}</span>
+              </div>
               <div class="job-company">${exp.company}</div>
-              <div class="job-dates">${exp.dates}</div>
-              <div class="job-location">${exp.location}</div>
+              <div class="job-location"><i class="fas fa-map-marker-alt"></i> ${exp.location}</div>
             </div>
             <div class="job-description">
               <ul class="job-achievements">
